@@ -36,7 +36,7 @@ public class HostTest {
             connection.connect();
             OutputStreamWriter out=new OutputStreamWriter(connection.getOutputStream(),"UTF-8");
             System.out.println(out);
-            out.append(new Gson().toJson(new User(111)));
+            out.append(new Gson().toJson(new User()));
             out.flush();
             out.close();
 
@@ -62,7 +62,7 @@ public class HostTest {
         return  aa;
     }
     public static void main(String[] args) throws IOException {
-        postTest("http://127.0.0.1:8806/Login/Login1/Login");
+        postTest("http://127.0.0.1:8006/Login/Login1/Login");
       //  postTest("http://www.baidu.com");
         System.out.println("11111111");
     }

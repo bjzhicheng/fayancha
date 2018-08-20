@@ -6,9 +6,9 @@ package org.Login;
  * @Version 1.0
  */
 public class User {
-    public User(int id){
-        this.id=id;
-    }
+    private int id;
+    private String password;
+
     public int getId() {
         return id;
     }
@@ -17,5 +17,11 @@ public class User {
         this.id = id;
     }
 
-    private int id;
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

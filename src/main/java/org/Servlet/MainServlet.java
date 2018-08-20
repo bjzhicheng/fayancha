@@ -52,7 +52,7 @@ import java.lang.reflect.Method;
             Gson gson=new Gson();
             System.out.println(gson.toJson(login1));
 
-            User user=new User(01);
+            User user=new User();
 
             System.out.println(gson.toJson(user));
 

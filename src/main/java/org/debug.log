@@ -1,0 +1,24 @@
+[DEBUG] 2018-08-20 09:49:13,797 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect password from user where id=1
+[DEBUG] 2018-08-20 09:50:42,478 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect password from user where id=2
+[DEBUG] 2018-08-20 09:50:42,490 method:org.Login.Login1.Login(Login1.java:79)
+THIS IS IN CREATE STATEMENTjava.sql.SQLException: Column 'id' not found.
+[DEBUG] 2018-08-20 09:51:44,561 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
+[DEBUG] 2018-08-20 09:59:32,084 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
+[DEBUG] 2018-08-20 09:59:47,248 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
+[DEBUG] 2018-08-20 10:05:41,082 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
+[DEBUG] 2018-08-20 10:05:46,730 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
+[DEBUG] 2018-08-20 10:07:17,039 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
+[DEBUG] 2018-08-20 10:07:46,798 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
+[DEBUG] 2018-08-20 10:08:31,002 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
+[DEBUG] 2018-08-20 10:09:28,534 method:org.Login.Login1.Login(Login1.java:64)
+this is in search mysqlselect * from user where id=2
