@@ -9,14 +9,17 @@ import redis.clients.jedis.Jedis;
  * @Version 1.0
  */
 public class Yanzheng {
-    public State Getyanzheng(UserDao userDao){
+    public UserDao Getyanzheng(UserDao userDao){
         State state=new State();
+        userDao.setId(1);//这里是一个生成ID算法
         int id=userDao.getId();
 
         //此处生成验证码
-        String  yanzhengma=null;
+        String  yanzhengma="1";//这里调用生成验证码的
+        userDao.setYanzhengma(yanzhengma);
+
         Jedis jedis6380=new Jedis("137.00.0.1",6380);
-        jedis6380.set(String.valueOf(id),yanzhengma);
+        jedis6380.set(userDao.getPhonenumber(),yanzhengma);
         String iid=id+"";
         jedis6380.expire(iid,60);
         state.setId(id);
@@ -24,6 +27,6 @@ public class Yanzheng {
 
 
 
-        return state;
+        return userDao;
     }
 }

@@ -56,7 +56,7 @@ public class InboundHandler  extends ChannelInboundHandlerAdapter {
 //        System.out.println("write");
 ////            int a=5/0;
 //
-//        //log.debug("--------------------------------------");
+//        //开发文档.debug("--------------------------------------");
 //    }
 //
 //
@@ -115,7 +115,7 @@ public class InboundHandler  extends ChannelInboundHandlerAdapter {
             LOGGER.debug("",e);
             e.printStackTrace();
         }
-        //log.debug("--------------------------------------");
+        //开发文档.debug("--------------------------------------");
     }
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {

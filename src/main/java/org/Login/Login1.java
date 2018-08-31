@@ -23,9 +23,9 @@ import org.*;
  * @Version 1.0
  *
  * port=3769 注册登陆redis
- * 返回state  0+id登陆失败
- *            1+id=登陆成功
- *            id pass 是前段传入数据
+ * 返回state  state=0登陆失败
+ *            state=1登陆成功
+ *            phonenumber   pass 是前段传入数据
  *
  */
 public class Login1{
@@ -36,22 +36,22 @@ public class Login1{
         Statement statement=null;
         State state=new State();
         state.setState(0);
-        int id=user.getId();
-        System.out.println(user.getId()+user.getPassword());
-        Object uid=0;
+
+        System.out.println("前段传入的手机号是："+user.getPhonenumber()+"  密码是"+user.getPassword());
+        String unimber=null;
         String upass=null;
         String pass=user.getPassword();
-        Jedis jedis=new Jedis("127.0.0.1",6379);
-        Set ss=jedis.keys(String.valueOf(id));
+        Jedis jedis6379=new Jedis("127.0.0.1",6379);
+        Set ss=jedis6379.keys(user.getPhonenumber());
         Iterator iterator=ss.iterator();
         while(iterator.hasNext()){
-            uid=iterator.next();
-              upass=jedis.get(String.valueOf(uid));
-            System.out.println(uid+upass+"12121212");
+            unimber= (String) iterator.next();
+              upass=jedis6379.get(unimber);
+            System.out.println("redis获取到手机号："+unimber+"   密码："+upass);
 
         }
-        if((uid.equals(String.valueOf(id)))&&(pass.equals(upass))){
-            state.setId(id);
+        if(upass.equals(user.getPassword())&&(unimber.equals(user.getPhonenumber()))){
+
             state.setState(1);
             System.out.println("从redis内匹配到用户");
             LOGGER.info("redis Login");
@@ -59,27 +59,27 @@ public class Login1{
 
         }else {
             System.out.println("JEDIS 没有匹配到");
+            System.out.println("==========================开始查询sql");
             LOGGER.info("MYSQL login");
             Connection conn=JDBCConnection.getconnection();
-            String sql="select * from user where id="+id;
+            String sql="select * from user where phonenumber="+user.getPhonenumber();
             System.out.println("sql="+sql);
             LOGGER.debug("this is in search mysql"+sql);
             try {
                 statement=conn.createStatement();
                 ResultSet rs=statement.executeQuery(sql);
                 if (rs.next()){
-                    uid=rs.getInt("id");
+                    unimber=rs.getString("phonenumber");
                     upass=rs.getString("password");
-                    if((uid.equals(id))&&(pass.equals(upass))){
+                    if((unimber.equals(user.getPhonenumber()))&&(pass.equals(upass))){
                         state.setState(1);
-                        state.setId(id);
-                        String ii=id+"";
-                        String pp=pass;
-                        jedis.set(ii,pass);
-                        jedis.expire(ii,50000000);
-                        //设置失效时间
-                        System.out.println("JEDIS更新  key="+ii+"value="+pass);
 
+
+                        jedis6379.set(user.getPhonenumber(),user.getPassword());
+                        jedis6379.expire(user.getPhonenumber(),30*24*60);
+                        //设置失效时间
+                        System.out.println("JEDIS更新了一条数据  key="+user.getPhonenumber()+"value="+user.getPassword());
+                          jedis6379.close();
                     }
 
                 }

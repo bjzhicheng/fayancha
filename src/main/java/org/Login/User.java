@@ -6,15 +6,14 @@ package org.Login;
  * @Version 1.0
  */
 public class User {
-    private int id;
-    private String password;
+    private String phonenumber;
 
-    public int getId() {
-        return id;
+    public String getPhonenumber() {
+        return phonenumber;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
     }
 
     public String getPassword() {
@@ -24,4 +23,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    private String password;
 }

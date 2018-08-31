@@ -1,0 +1,84 @@
+[INFO ] 2018-08-21 13:06:07,358 method:org.Register.Register1.Regesit(Register1.java:51)
+register insert jdbc
+[INFO ] 2018-08-21 13:06:37,222 method:org.Register.Register1.Regesit(Register1.java:51)
+register insert jdbc
+[INFO ] 2018-08-21 14:32:39,374 method:org.HeTong.GetHetong.getall(GetHetong.java:30)
+this is my sqlSelect * from hetong where id like1
+[INFO ] 2018-08-21 14:32:39,486 method:org.HeTong.GetHetong.getall(GetHetong.java:44)
+这是我们的 []
+[INFO ] 2018-08-21 14:33:22,580 method:org.HeTong.GetHetong.getall(GetHetong.java:30)
+this is my sqlSelect * from hetong where id like 1
+[INFO ] 2018-08-21 14:33:22,765 method:org.HeTong.GetHetong.getall(GetHetong.java:44)
+这是我们的 [{"loves":0,"title":"title"}]
+[INFO ] 2018-08-21 14:34:34,787 method:org.HeTong.GetHetong.getall(GetHetong.java:30)
+this is my sqlSelect * from hetong where id like 3
+[INFO ] 2018-08-21 14:34:34,916 method:org.HeTong.GetHetong.getall(GetHetong.java:44)
+这是我们的 []
+[INFO ] 2018-08-21 14:34:56,744 method:org.HeTong.GetHetong.getall(GetHetong.java:30)
+this is my sqlSelect * from hetong where id like 4
+[INFO ] 2018-08-21 14:34:56,886 method:org.HeTong.GetHetong.getall(GetHetong.java:44)
+这是我们的 []
+[INFO ] 2018-08-21 14:38:54,027 method:org.HeTong.GetHetong.getall(GetHetong.java:30)
+this is my sqlSelect * from hetong where id like '4%'
+[INFO ] 2018-08-21 14:38:54,191 method:org.HeTong.GetHetong.getall(GetHetong.java:44)
+这是我们的 [{"loves":0,"time":"2018.08.21","title":"this is a describe test"}]
+[INFO ] 2018-08-21 14:41:32,403 method:org.HeTong.GetHetong.getall(GetHetong.java:33)
+this is my sqlSelect * from hetong where id like '4%'
+[INFO ] 2018-08-21 14:41:32,587 method:org.HeTong.GetHetong.getall(GetHetong.java:49)
+这是我们的 [{"id":"4_htttp://8080//hhh","loves":0,"time":"2018.08.21","title":"this is a describe test","url":"htttp://8080//hhh"},{"$ref":"$[0]"}]
+[INFO ] 2018-08-21 15:04:09,382 method:org.HeTong.GetHetong.get(GetHetong.java:99)
+this is my url from redis ""
+[INFO ] 2018-08-21 15:09:17,178 method:org.HeTong.GetHetong.get(GetHetong.java:103)
+this is my url from redis ""
+[INFO ] 2018-08-21 15:09:53,794 method:org.HeTong.GetHetong.get(GetHetong.java:103)
+this is my url from redis ""
+[INFO ] 2018-08-21 15:10:31,503 method:org.HeTong.GetHetong.get(GetHetong.java:103)
+this is my url from redis ""
+[INFO ] 2018-08-21 15:11:53,099 method:org.HeTong.GetHetong.get(GetHetong.java:90)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-21 15:11:53,312 method:org.HeTong.GetHetong.get(GetHetong.java:104)
+this is my url from redis ""
+[INFO ] 2018-08-21 15:13:09,073 method:org.HeTong.GetHetong.get(GetHetong.java:90)
+合同的id是  3_htttp://8080//hhh
+[INFO ] 2018-08-21 15:13:09,279 method:org.HeTong.GetHetong.get(GetHetong.java:104)
+this is my url from redis "htttp://8080//hhh"
+[INFO ] 2018-08-21 15:15:13,540 method:org.HeTong.GetHetong.get(GetHetong.java:90)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-21 15:15:13,894 method:org.HeTong.GetHetong.get(GetHetong.java:111)
+this is my sql  select url from hetong where id =2_htttp://8080//hhh
+[WARN ] 2018-08-21 15:15:13,904 method:org.HeTong.GetHetong.get(GetHetong.java:129)
+this is in create statement   com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://8080//hhh' at line 1
+[INFO ] 2018-08-21 15:16:59,316 method:org.HeTong.GetHetong.get(GetHetong.java:90)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-21 15:16:59,687 method:org.HeTong.GetHetong.get(GetHetong.java:111)
+this is my sql  select url from hetong where id ='2_htttp://8080//hhh'
+[INFO ] 2018-08-21 15:16:59,690 method:org.HeTong.GetHetong.get(GetHetong.java:120)
+this is url from sql htttp://8080//hhh
+[INFO ] 2018-08-21 15:17:12,043 method:org.HeTong.GetHetong.get(GetHetong.java:90)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-21 15:17:12,254 method:org.HeTong.GetHetong.get(GetHetong.java:104)
+this is my url from redis "htttp://8080//hhh"
+[INFO ] 2018-08-21 15:59:22,284 method:org.DeleteHetong.DeleteHetong.delete(DeleteHetong.java:32)
+this is my delete sql   delete from hetong where id='4_htttp://8080//hhh'
+[INFO ] 2018-08-21 16:05:06,378 method:org.DeleteHetong.DeleteHetong.delete(DeleteHetong.java:32)
+this is my delete sql   delete from hetong where id='3_htttp://8080//hhh'
+[INFO ] 2018-08-21 17:09:28,381 method:org.Userchange.Userchange.Userchange(Userchange.java:26)
+this is my update sql   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader')
+[INFO ] 2018-08-21 17:10:37,819 method:org.Userchange.Userchange.Userchange(Userchange.java:26)
+this is my update sql   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader'where id=2
+[INFO ] 2018-08-21 17:11:13,242 method:org.Userchange.Userchange.Userchange(Userchange.java:26)
+this is my update sql   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader' where id=2
+[INFO ] 2018-08-21 17:13:11,047 method:org.Userchange.Userchange.Userchange(Userchange.java:28)
+this is my update sql   update user set name='change',weixin='yan1234567',nativespace='beijing test',companyname='yi jia gou ',position='leader' where id=2
+[INFO ] 2018-08-21 17:50:59,667 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:41)
+this is user id：  2
+[INFO ] 2018-08-21 17:50:59,986 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:54)
+这是获取的手机号码： 18321346579
+[INFO ] 2018-08-21 17:52:10,180 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:42)
+this is user id：  2
+[INFO ] 2018-08-21 17:52:10,525 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:55)
+这是获取的手机号码： 18321346579
+[INFO ] 2018-08-21 23:48:33,125 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:42)
+this is user id：  2
+[INFO ] 2018-08-21 23:48:33,452 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:55)
+这是获取的手机号码： 18321346579

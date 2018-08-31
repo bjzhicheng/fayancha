@@ -1,0 +1,2 @@
+redis 6382  短信验证60s  key=phonenumber   value=SendMessage
+redis 6379  登陆         key=phonenumber  value=password
