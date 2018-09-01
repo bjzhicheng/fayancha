@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Law:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Law-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Law:war exploded" />
+    </root>
+  </artifact>
+</component>

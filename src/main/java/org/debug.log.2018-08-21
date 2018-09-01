@@ -1,24 +1,24 @@
-[INFO ] 2018-08-21 15:59:22,284 method:org.DeleteHetong.DeleteHetong.delete(DeleteHetong.java:32)
+[INFO ] 2018-08-21 15:59:22,284 method:org.Control.DeleteHetong.delete(DeleteHetong.java:32)
 this is my delete sql   delete from hetong where id='4_htttp://8080//hhh'
-[INFO ] 2018-08-21 16:05:06,378 method:org.DeleteHetong.DeleteHetong.delete(DeleteHetong.java:32)
+[INFO ] 2018-08-21 16:05:06,378 method:org.Control.DeleteHetong.delete(DeleteHetong.java:32)
 this is my delete sql   delete from hetong where id='3_htttp://8080//hhh'
-[INFO ] 2018-08-21 17:09:28,381 method:org.Userchange.Userchange.Userchange(Userchange.java:26)
+[INFO ] 2018-08-21 17:09:28,381 method:org.Control.Userchange.Userchange(Userchange.java:26)
 this is my update sql   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader')
-[INFO ] 2018-08-21 17:10:37,819 method:org.Userchange.Userchange.Userchange(Userchange.java:26)
+[INFO ] 2018-08-21 17:10:37,819 method:org.Control.Userchange.Userchange(Userchange.java:26)
 this is my update sql   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader'where id=2
-[INFO ] 2018-08-21 17:11:13,242 method:org.Userchange.Userchange.Userchange(Userchange.java:26)
+[INFO ] 2018-08-21 17:11:13,242 method:org.Control.Userchange.Userchange(Userchange.java:26)
 this is my update sql   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader' where id=2
-[INFO ] 2018-08-21 17:13:11,047 method:org.Userchange.Userchange.Userchange(Userchange.java:28)
+[INFO ] 2018-08-21 17:13:11,047 method:org.Control.Userchange.Userchange(Userchange.java:28)
 this is my update sql   update user set name='change',weixin='yan1234567',nativespace='beijing test',companyname='yi jia gou ',position='leader' where id=2
-[INFO ] 2018-08-21 17:50:59,667 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:41)
+[INFO ] 2018-08-21 17:50:59,667 method:org.Control.PhoneChange.getphone(PhoneChange.java:41)
 this is user id：  2
-[INFO ] 2018-08-21 17:50:59,986 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:54)
+[INFO ] 2018-08-21 17:50:59,986 method:org.Control.PhoneChange.getphone(PhoneChange.java:54)
 这是获取的手机号码： 18321346579
-[INFO ] 2018-08-21 17:52:10,180 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:42)
+[INFO ] 2018-08-21 17:52:10,180 method:org.Control.PhoneChange.getphone(PhoneChange.java:42)
 this is user id：  2
-[INFO ] 2018-08-21 17:52:10,525 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:55)
+[INFO ] 2018-08-21 17:52:10,525 method:org.Control.PhoneChange.getphone(PhoneChange.java:55)
 这是获取的手机号码： 18321346579
-[INFO ] 2018-08-21 23:48:33,125 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:42)
+[INFO ] 2018-08-21 23:48:33,125 method:org.Control.PhoneChange.getphone(PhoneChange.java:42)
 this is user id：  2
-[INFO ] 2018-08-21 23:48:33,452 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:55)
+[INFO ] 2018-08-21 23:48:33,452 method:org.Control.PhoneChange.getphone(PhoneChange.java:55)
 这是获取的手机号码： 18321346579

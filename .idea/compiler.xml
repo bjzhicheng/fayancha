@@ -9,5 +9,8 @@
         <module name="Law" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Law" target="7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

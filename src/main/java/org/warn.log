@@ -1,2 +1,2 @@
-[WARN ] 2018-08-21 15:15:13,904 method:org.HeTong.GetHetong.get(GetHetong.java:129)
-this is in create statement   com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '://8080//hhh' at line 1
+[WARN ] 2018-09-01 09:34:19,151 method:org.Control.PassChangeSend.ChangeSend(PassChangeSend.java:37)
+this is a warn in seng message:com.aliyuncs.exceptions.ClientException: SDK.ServerUnreachable : Server unreachable: java.net.UnknownHostException: dysmsapi.aliyuncs.com

@@ -1,0 +1,364 @@
+[INFO ] 2018-08-31 09:53:53,782 method:org.Control.Register1.Regesit(Register1.java:66)
+电话为： 17695569629的生成id为：1566297945
+[INFO ] 2018-08-31 09:53:53,882 method:org.Control.Register1.Regesit(Register1.java:88)
+this is userorg.Register.UserDao@4dcbadb4
+[INFO ] 2018-08-31 09:53:54,352 method:org.Control.Register1.Regesit(Register1.java:93)
+register insert jdbc
+[INFO ] 2018-08-31 10:15:09,181 method:org.Control.Login1.Login(Login1.java:63)
+MYSQL login
+[DEBUG] 2018-08-31 10:15:09,515 method:org.Control.Login1.Login(Login1.java:67)
+this is in search mysqlselect * from user where phonenumber=17695569629
+[INFO ] 2018-08-31 10:16:27,765 method:org.Control.Login1.Login(Login1.java:63)
+MYSQL login
+[DEBUG] 2018-08-31 10:16:28,086 method:org.Control.Login1.Login(Login1.java:67)
+this is in search mysqlselect * from user where phonenumber=17695569629
+[INFO ] 2018-08-31 10:16:37,225 method:org.Control.Login1.Login(Login1.java:57)
+redis Login
+[INFO ] 2018-08-31 10:29:35,742 method:org.Control.PhoneChange.getphone(PhoneChange.java:45)
+this is user id：  1566297945
+[INFO ] 2018-08-31 10:29:36,116 method:org.Control.PhoneChange.getphone(PhoneChange.java:58)
+这是获取的手机号码： 17695569629
+[INFO ] 2018-08-31 12:35:04,973 method:org.Control.Login1.Login(Login1.java:54)
+redis Login
+[INFO ] 2018-08-31 13:17:06,998 method:org.Control.PhoneChange.getphone(PhoneChange.java:48)
+this is user id：  1566297945
+[INFO ] 2018-08-31 13:17:07,303 method:org.Control.PhoneChange.getphone(PhoneChange.java:61)
+这是获取的手机号码： 17695569629
+[DEBUG] 2018-08-31 13:24:07,953 method:io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:59)
+Using Log4J as the default logging framework
+[DEBUG] 2018-08-31 13:24:07,989 method:io.netty.channel.MultithreadEventLoopGroup.<clinit>(MultithreadEventLoopGroup.java:41)
+-Dio.netty.eventLoopThreads: 8
+[DEBUG] 2018-08-31 13:24:08,039 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:75)
+java.nio.Buffer.address: available
+[DEBUG] 2018-08-31 13:24:08,043 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:83)
+sun.misc.Unsafe.theUnsafe: available
+[DEBUG] 2018-08-31 13:24:08,043 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:92)
+sun.misc.Unsafe.copyMemory: available
+[DEBUG] 2018-08-31 13:24:08,044 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:132)
+java.nio.Bits.unaligned: true
+[DEBUG] 2018-08-31 13:24:08,045 method:io.netty.util.internal.PlatformDependent.javaVersion0(PlatformDependent.java:583)
+Java version: 8
+[DEBUG] 2018-08-31 13:24:08,046 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:590)
+-Dio.netty.noUnsafe: false
+[DEBUG] 2018-08-31 13:24:08,046 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:617)
+sun.misc.Unsafe: available
+[DEBUG] 2018-08-31 13:24:08,047 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:700)
+-Dio.netty.noJavassist: false
+[DEBUG] 2018-08-31 13:24:08,048 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:713)
+Javassist: unavailable
+[DEBUG] 2018-08-31 13:24:08,048 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:714)
+You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+[DEBUG] 2018-08-31 13:24:08,048 method:io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:732)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-08-31 13:24:08,049 method:io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:811)
+-Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG] 2018-08-31 13:24:08,049 method:io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:87)
+-Dio.netty.noPreferDirect: false
+[DEBUG] 2018-08-31 13:24:08,076 method:io.netty.util.internal.NativeLibraryLoader.tmpdir(NativeLibraryLoader.java:74)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-08-31 13:24:08,077 method:io.netty.util.internal.NativeLibraryLoader.<clinit>(NativeLibraryLoader.java:59)
+-Dio.netty.netty.workdir: /tmp (io.netty.tmpdir)
+[DEBUG] 2018-08-31 13:24:08,128 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:98)
+-Dio.netty.allocator.numHeapArenas: 4
+[DEBUG] 2018-08-31 13:24:08,128 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:99)
+-Dio.netty.allocator.numDirectArenas: 4
+[DEBUG] 2018-08-31 13:24:08,128 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:101)
+-Dio.netty.allocator.pageSize: 8192
+[DEBUG] 2018-08-31 13:24:08,129 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:106)
+-Dio.netty.allocator.maxOrder: 11
+[DEBUG] 2018-08-31 13:24:08,129 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:110)
+-Dio.netty.allocator.chunkSize: 16777216
+[DEBUG] 2018-08-31 13:24:08,129 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:111)
+-Dio.netty.allocator.tinyCacheSize: 512
+[DEBUG] 2018-08-31 13:24:08,130 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:112)
+-Dio.netty.allocator.smallCacheSize: 256
+[DEBUG] 2018-08-31 13:24:08,130 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:113)
+-Dio.netty.allocator.normalCacheSize: 64
+[DEBUG] 2018-08-31 13:24:08,130 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:114)
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG] 2018-08-31 13:24:08,131 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:115)
+-Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG] 2018-08-31 13:24:08,177 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:90)
+-Dio.netty.processId: 20175 (auto-detected)
+[DEBUG] 2018-08-31 13:24:08,183 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:110)
+-Dio.netty.machineId: 28:56:5a:ff:fe:58:5f:65 (auto-detected)
+[DEBUG] 2018-08-31 13:24:08,185 method:io.netty.util.internal.ThreadLocalRandom.newSeed(ThreadLocalRandom.java:199)
+-Dio.netty.initialSeedUniquifier: 0xbf50ec97b8bfa646 (took 40 ms)
+[DEBUG] 2018-08-31 13:24:08,223 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:66)
+-Dio.netty.allocator.type: pooled
+[DEBUG] 2018-08-31 13:24:08,224 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:75)
+-Dio.netty.threadLocalDirectBufferSize: 65536
+[DEBUG] 2018-08-31 13:24:08,226 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:203)
+Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+[DEBUG] 2018-08-31 13:24:08,227 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:241)
+/proc/sys/net/core/somaxconn: 128
+[DEBUG] 2018-08-31 13:47:16,085 method:org.mainServer.Server.main(Server.java:90)
+aaaa
+[DEBUG] 2018-08-31 13:47:17,177 method:io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:59)
+Using Log4J as the default logging framework
+[DEBUG] 2018-08-31 13:47:17,208 method:io.netty.channel.MultithreadEventLoopGroup.<clinit>(MultithreadEventLoopGroup.java:41)
+-Dio.netty.eventLoopThreads: 8
+[DEBUG] 2018-08-31 13:47:17,246 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:75)
+java.nio.Buffer.address: available
+[DEBUG] 2018-08-31 13:47:17,247 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:83)
+sun.misc.Unsafe.theUnsafe: available
+[DEBUG] 2018-08-31 13:47:17,248 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:92)
+sun.misc.Unsafe.copyMemory: available
+[DEBUG] 2018-08-31 13:47:17,249 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:132)
+java.nio.Bits.unaligned: true
+[DEBUG] 2018-08-31 13:47:17,249 method:io.netty.util.internal.PlatformDependent.javaVersion0(PlatformDependent.java:583)
+Java version: 8
+[DEBUG] 2018-08-31 13:47:17,250 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:590)
+-Dio.netty.noUnsafe: false
+[DEBUG] 2018-08-31 13:47:17,250 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:617)
+sun.misc.Unsafe: available
+[DEBUG] 2018-08-31 13:47:17,251 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:700)
+-Dio.netty.noJavassist: false
+[DEBUG] 2018-08-31 13:47:17,253 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:713)
+Javassist: unavailable
+[DEBUG] 2018-08-31 13:47:17,253 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:714)
+You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+[DEBUG] 2018-08-31 13:47:17,253 method:io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:732)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-08-31 13:47:17,254 method:io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:811)
+-Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG] 2018-08-31 13:47:17,255 method:io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:87)
+-Dio.netty.noPreferDirect: false
+[DEBUG] 2018-08-31 13:47:17,268 method:io.netty.util.internal.NativeLibraryLoader.tmpdir(NativeLibraryLoader.java:74)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-08-31 13:47:17,269 method:io.netty.util.internal.NativeLibraryLoader.<clinit>(NativeLibraryLoader.java:59)
+-Dio.netty.netty.workdir: /tmp (io.netty.tmpdir)
+[DEBUG] 2018-08-31 13:47:17,305 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:98)
+-Dio.netty.allocator.numHeapArenas: 4
+[DEBUG] 2018-08-31 13:47:17,305 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:99)
+-Dio.netty.allocator.numDirectArenas: 4
+[DEBUG] 2018-08-31 13:47:17,305 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:101)
+-Dio.netty.allocator.pageSize: 8192
+[DEBUG] 2018-08-31 13:47:17,306 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:106)
+-Dio.netty.allocator.maxOrder: 11
+[DEBUG] 2018-08-31 13:47:17,308 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:110)
+-Dio.netty.allocator.chunkSize: 16777216
+[DEBUG] 2018-08-31 13:47:17,308 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:111)
+-Dio.netty.allocator.tinyCacheSize: 512
+[DEBUG] 2018-08-31 13:47:17,308 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:112)
+-Dio.netty.allocator.smallCacheSize: 256
+[DEBUG] 2018-08-31 13:47:17,309 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:113)
+-Dio.netty.allocator.normalCacheSize: 64
+[DEBUG] 2018-08-31 13:47:17,309 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:114)
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG] 2018-08-31 13:47:17,309 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:115)
+-Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG] 2018-08-31 13:47:17,359 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:90)
+-Dio.netty.processId: 21239 (auto-detected)
+[DEBUG] 2018-08-31 13:47:17,361 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:110)
+-Dio.netty.machineId: 28:56:5a:ff:fe:58:5f:65 (auto-detected)
+[DEBUG] 2018-08-31 13:47:17,362 method:io.netty.util.internal.ThreadLocalRandom.newSeed(ThreadLocalRandom.java:199)
+-Dio.netty.initialSeedUniquifier: 0x84723449959e1a8d (took 15 ms)
+[DEBUG] 2018-08-31 13:47:17,393 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:66)
+-Dio.netty.allocator.type: pooled
+[DEBUG] 2018-08-31 13:47:17,394 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:75)
+-Dio.netty.threadLocalDirectBufferSize: 65536
+[DEBUG] 2018-08-31 13:47:17,396 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:203)
+Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+[DEBUG] 2018-08-31 13:47:17,397 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:241)
+/proc/sys/net/core/somaxconn: 128
+[ERROR] 2018-08-31 13:47:17,518 method:org.mainServer.Server$2.run(Server.java:85)
+Inbound Server crash!!!
+java.io.IOException: bind() failed: 地址已在使用
+	at io.netty.channel.epoll.Native.newIOException(Native.java:124)
+	at io.netty.channel.epoll.Native.bind(Native.java:390)
+	at io.netty.channel.epoll.EpollServerSocketChannel.doBind(EpollServerSocketChannel.java:62)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:554)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1237)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeBindNow(ChannelHandlerInvokerUtil.java:109)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeBind(DefaultChannelHandlerInvoker.java:214)
+	at io.netty.channel.PausableChannelEventExecutor.invokeBind(PausableChannelEventExecutor.java:101)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:481)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:1013)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:236)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:254)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+[DEBUG] 2018-08-31 13:47:48,955 method:org.mainServer.Server.main(Server.java:90)
+aaaa
+[DEBUG] 2018-08-31 13:47:49,934 method:io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:59)
+Using Log4J as the default logging framework
+[DEBUG] 2018-08-31 13:47:49,943 method:io.netty.channel.MultithreadEventLoopGroup.<clinit>(MultithreadEventLoopGroup.java:41)
+-Dio.netty.eventLoopThreads: 8
+[DEBUG] 2018-08-31 13:47:49,980 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:75)
+java.nio.Buffer.address: available
+[DEBUG] 2018-08-31 13:47:49,981 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:83)
+sun.misc.Unsafe.theUnsafe: available
+[DEBUG] 2018-08-31 13:47:49,982 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:92)
+sun.misc.Unsafe.copyMemory: available
+[DEBUG] 2018-08-31 13:47:49,983 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:132)
+java.nio.Bits.unaligned: true
+[DEBUG] 2018-08-31 13:47:49,983 method:io.netty.util.internal.PlatformDependent.javaVersion0(PlatformDependent.java:583)
+Java version: 8
+[DEBUG] 2018-08-31 13:47:49,984 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:590)
+-Dio.netty.noUnsafe: false
+[DEBUG] 2018-08-31 13:47:49,984 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:617)
+sun.misc.Unsafe: available
+[DEBUG] 2018-08-31 13:47:49,984 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:700)
+-Dio.netty.noJavassist: false
+[DEBUG] 2018-08-31 13:47:49,985 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:713)
+Javassist: unavailable
+[DEBUG] 2018-08-31 13:47:49,986 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:714)
+You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+[DEBUG] 2018-08-31 13:47:49,986 method:io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:732)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-08-31 13:47:49,986 method:io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:811)
+-Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG] 2018-08-31 13:47:49,986 method:io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:87)
+-Dio.netty.noPreferDirect: false
+[DEBUG] 2018-08-31 13:47:49,999 method:io.netty.util.internal.NativeLibraryLoader.tmpdir(NativeLibraryLoader.java:74)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-08-31 13:47:50,000 method:io.netty.util.internal.NativeLibraryLoader.<clinit>(NativeLibraryLoader.java:59)
+-Dio.netty.netty.workdir: /tmp (io.netty.tmpdir)
+[DEBUG] 2018-08-31 13:47:50,038 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:98)
+-Dio.netty.allocator.numHeapArenas: 4
+[DEBUG] 2018-08-31 13:47:50,039 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:99)
+-Dio.netty.allocator.numDirectArenas: 4
+[DEBUG] 2018-08-31 13:47:50,050 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:101)
+-Dio.netty.allocator.pageSize: 8192
+[DEBUG] 2018-08-31 13:47:50,050 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:106)
+-Dio.netty.allocator.maxOrder: 11
+[DEBUG] 2018-08-31 13:47:50,050 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:110)
+-Dio.netty.allocator.chunkSize: 16777216
+[DEBUG] 2018-08-31 13:47:50,050 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:111)
+-Dio.netty.allocator.tinyCacheSize: 512
+[DEBUG] 2018-08-31 13:47:50,051 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:112)
+-Dio.netty.allocator.smallCacheSize: 256
+[DEBUG] 2018-08-31 13:47:50,051 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:113)
+-Dio.netty.allocator.normalCacheSize: 64
+[DEBUG] 2018-08-31 13:47:50,051 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:114)
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG] 2018-08-31 13:47:50,051 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:115)
+-Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG] 2018-08-31 13:47:50,079 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:90)
+-Dio.netty.processId: 21441 (auto-detected)
+[DEBUG] 2018-08-31 13:47:50,081 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:110)
+-Dio.netty.machineId: 28:56:5a:ff:fe:58:5f:65 (auto-detected)
+[DEBUG] 2018-08-31 13:47:50,082 method:io.netty.util.internal.ThreadLocalRandom.newSeed(ThreadLocalRandom.java:199)
+-Dio.netty.initialSeedUniquifier: 0xd603f675c2160600 (took 15 ms)
+[DEBUG] 2018-08-31 13:47:50,121 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:66)
+-Dio.netty.allocator.type: pooled
+[DEBUG] 2018-08-31 13:47:50,121 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:75)
+-Dio.netty.threadLocalDirectBufferSize: 65536
+[DEBUG] 2018-08-31 13:47:50,123 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:203)
+Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+[DEBUG] 2018-08-31 13:47:50,124 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:241)
+/proc/sys/net/core/somaxconn: 128
+[ERROR] 2018-08-31 13:47:50,286 method:org.mainServer.Server$2.run(Server.java:85)
+Inbound Server crash!!!
+java.io.IOException: bind() failed: 地址已在使用
+	at io.netty.channel.epoll.Native.newIOException(Native.java:124)
+	at io.netty.channel.epoll.Native.bind(Native.java:390)
+	at io.netty.channel.epoll.EpollServerSocketChannel.doBind(EpollServerSocketChannel.java:62)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:554)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1237)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeBindNow(ChannelHandlerInvokerUtil.java:109)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeBind(DefaultChannelHandlerInvoker.java:214)
+	at io.netty.channel.PausableChannelEventExecutor.invokeBind(PausableChannelEventExecutor.java:101)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:481)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:1013)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:236)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:254)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+[DEBUG] 2018-08-31 13:49:08,584 method:org.mainServer.Server.main(Server.java:90)
+aaaa
+[DEBUG] 2018-08-31 13:49:09,385 method:io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:59)
+Using Log4J as the default logging framework
+[DEBUG] 2018-08-31 13:49:09,406 method:io.netty.channel.MultithreadEventLoopGroup.<clinit>(MultithreadEventLoopGroup.java:41)
+-Dio.netty.eventLoopThreads: 8
+[DEBUG] 2018-08-31 13:49:09,458 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:75)
+java.nio.Buffer.address: available
+[DEBUG] 2018-08-31 13:49:09,460 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:83)
+sun.misc.Unsafe.theUnsafe: available
+[DEBUG] 2018-08-31 13:49:09,461 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:92)
+sun.misc.Unsafe.copyMemory: available
+[DEBUG] 2018-08-31 13:49:09,462 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:132)
+java.nio.Bits.unaligned: true
+[DEBUG] 2018-08-31 13:49:09,463 method:io.netty.util.internal.PlatformDependent.javaVersion0(PlatformDependent.java:583)
+Java version: 8
+[DEBUG] 2018-08-31 13:49:09,463 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:590)
+-Dio.netty.noUnsafe: false
+[DEBUG] 2018-08-31 13:49:09,464 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:617)
+sun.misc.Unsafe: available
+[DEBUG] 2018-08-31 13:49:09,464 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:700)
+-Dio.netty.noJavassist: false
+[DEBUG] 2018-08-31 13:49:09,472 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:713)
+Javassist: unavailable
+[DEBUG] 2018-08-31 13:49:09,473 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:714)
+You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+[DEBUG] 2018-08-31 13:49:09,473 method:io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:732)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-08-31 13:49:09,473 method:io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:811)
+-Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG] 2018-08-31 13:49:09,474 method:io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:87)
+-Dio.netty.noPreferDirect: false
+[DEBUG] 2018-08-31 13:49:09,490 method:io.netty.util.internal.NativeLibraryLoader.tmpdir(NativeLibraryLoader.java:74)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-08-31 13:49:09,490 method:io.netty.util.internal.NativeLibraryLoader.<clinit>(NativeLibraryLoader.java:59)
+-Dio.netty.netty.workdir: /tmp (io.netty.tmpdir)
+[DEBUG] 2018-08-31 13:49:09,556 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:98)
+-Dio.netty.allocator.numHeapArenas: 4
+[DEBUG] 2018-08-31 13:49:09,556 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:99)
+-Dio.netty.allocator.numDirectArenas: 4
+[DEBUG] 2018-08-31 13:49:09,562 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:101)
+-Dio.netty.allocator.pageSize: 8192
+[DEBUG] 2018-08-31 13:49:09,563 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:106)
+-Dio.netty.allocator.maxOrder: 11
+[DEBUG] 2018-08-31 13:49:09,564 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:110)
+-Dio.netty.allocator.chunkSize: 16777216
+[DEBUG] 2018-08-31 13:49:09,565 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:111)
+-Dio.netty.allocator.tinyCacheSize: 512
+[DEBUG] 2018-08-31 13:49:09,566 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:112)
+-Dio.netty.allocator.smallCacheSize: 256
+[DEBUG] 2018-08-31 13:49:09,566 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:113)
+-Dio.netty.allocator.normalCacheSize: 64
+[DEBUG] 2018-08-31 13:49:09,567 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:114)
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG] 2018-08-31 13:49:09,568 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:115)
+-Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG] 2018-08-31 13:49:09,604 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:90)
+-Dio.netty.processId: 21578 (auto-detected)
+[DEBUG] 2018-08-31 13:49:09,610 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:110)
+-Dio.netty.machineId: 28:56:5a:ff:fe:58:5f:65 (auto-detected)
+[DEBUG] 2018-08-31 13:49:09,610 method:io.netty.util.internal.ThreadLocalRandom.newSeed(ThreadLocalRandom.java:199)
+-Dio.netty.initialSeedUniquifier: 0xa358ce43aef6b028 (took 14 ms)
+[DEBUG] 2018-08-31 13:49:09,649 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:66)
+-Dio.netty.allocator.type: pooled
+[DEBUG] 2018-08-31 13:49:09,650 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:75)
+-Dio.netty.threadLocalDirectBufferSize: 65536
+[DEBUG] 2018-08-31 13:49:09,652 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:203)
+Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+[DEBUG] 2018-08-31 13:49:09,653 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:241)
+/proc/sys/net/core/somaxconn: 128
+[INFO ] 2018-08-31 14:12:40,540 method:org.Control.GetHetong.get(GetHetong.java:95)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-31 14:33:41,802 method:org.Control.Login1.Login(Login1.java:55)
+redis Login
+[INFO ] 2018-08-31 14:35:54,948 method:org.Control.DeleteHetong.delete(DeleteHetong.java:32)
+this is my delete sql   delete from hetong where id='123_http:uiw/wew/eww/ewwrw221/'
+[INFO ] 2018-08-31 14:36:20,919 method:org.Control.GetHetong.get(GetHetong.java:96)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-31 14:36:21,308 method:org.Control.GetHetong.get(GetHetong.java:117)
+this is my sql  select url from hetong where id ='2_htttp://8080//hhh'
+[INFO ] 2018-08-31 14:36:21,311 method:org.Control.GetHetong.get(GetHetong.java:126)
+this is url from sql htttp://8080//hhh
+[INFO ] 2018-08-31 14:38:47,083 method:org.Control.GetHetong.get(GetHetong.java:96)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-31 14:38:47,313 method:org.Control.GetHetong.get(GetHetong.java:110)
+this is my url from redis "htttp://8080//hhh"
+[INFO ] 2018-08-31 14:42:34,939 method:org.Control.Login1.Login(Login1.java:55)
+redis Login

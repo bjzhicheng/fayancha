@@ -1,16 +1,74 @@
-[INFO ] 2018-08-31 09:53:53,782 method:org.Register.Register1.Regesit(Register1.java:66)
-电话为： 17695569629的生成id为：1566297945
-[INFO ] 2018-08-31 09:53:53,882 method:org.Register.Register1.Regesit(Register1.java:88)
-this is userorg.Register.UserDao@4dcbadb4
-[INFO ] 2018-08-31 09:53:54,352 method:org.Register.Register1.Regesit(Register1.java:93)
-register insert jdbc
-[INFO ] 2018-08-31 10:15:09,181 method:org.Login.Login1.Login(Login1.java:63)
-MYSQL login
-[DEBUG] 2018-08-31 10:15:09,515 method:org.Login.Login1.Login(Login1.java:67)
-this is in search mysqlselect * from user where phonenumber=17695569629
-[INFO ] 2018-08-31 10:16:27,765 method:org.Login.Login1.Login(Login1.java:63)
-MYSQL login
-[DEBUG] 2018-08-31 10:16:28,086 method:org.Login.Login1.Login(Login1.java:67)
-this is in search mysqlselect * from user where phonenumber=17695569629
-[INFO ] 2018-08-31 10:16:37,225 method:org.Login.Login1.Login(Login1.java:57)
-redis Login
+[WARN ] 2018-09-01 09:34:19,151 method:org.Control.PassChangeSend.ChangeSend(PassChangeSend.java:37)
+this is a warn in seng message:com.aliyuncs.exceptions.ClientException: SDK.ServerUnreachable : Server unreachable: java.net.UnknownHostException: dysmsapi.aliyuncs.com
+[INFO ] 2018-09-01 09:38:45,183 method:org.Control.PassChangeSend.PassChange(PassChangeSend.java:79)
+this is my change pass sqlupdate user set password='123456tttt'where id=1566297945
+[DEBUG] 2018-09-01 11:23:18,069 method:org.mainServer.Server.main(Server.java:92)
+aaaa
+[DEBUG] 2018-09-01 11:23:18,977 method:io.netty.util.internal.logging.InternalLoggerFactory.newDefaultFactory(InternalLoggerFactory.java:59)
+Using Log4J as the default logging framework
+[DEBUG] 2018-09-01 11:23:18,998 method:io.netty.channel.MultithreadEventLoopGroup.<clinit>(MultithreadEventLoopGroup.java:41)
+-Dio.netty.eventLoopThreads: 8
+[DEBUG] 2018-09-01 11:23:19,068 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:75)
+java.nio.Buffer.address: available
+[DEBUG] 2018-09-01 11:23:19,070 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:83)
+sun.misc.Unsafe.theUnsafe: available
+[DEBUG] 2018-09-01 11:23:19,070 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:92)
+sun.misc.Unsafe.copyMemory: available
+[DEBUG] 2018-09-01 11:23:19,071 method:io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:132)
+java.nio.Bits.unaligned: true
+[DEBUG] 2018-09-01 11:23:19,072 method:io.netty.util.internal.PlatformDependent.javaVersion0(PlatformDependent.java:583)
+Java version: 8
+[DEBUG] 2018-09-01 11:23:19,072 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:590)
+-Dio.netty.noUnsafe: false
+[DEBUG] 2018-09-01 11:23:19,072 method:io.netty.util.internal.PlatformDependent.hasUnsafe0(PlatformDependent.java:617)
+sun.misc.Unsafe: available
+[DEBUG] 2018-09-01 11:23:19,073 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:700)
+-Dio.netty.noJavassist: false
+[DEBUG] 2018-09-01 11:23:19,074 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:713)
+Javassist: unavailable
+[DEBUG] 2018-09-01 11:23:19,075 method:io.netty.util.internal.PlatformDependent.hasJavassist0(PlatformDependent.java:714)
+You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+[DEBUG] 2018-09-01 11:23:19,075 method:io.netty.util.internal.PlatformDependent.tmpdir0(PlatformDependent.java:732)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-09-01 11:23:19,075 method:io.netty.util.internal.PlatformDependent.bitMode0(PlatformDependent.java:811)
+-Dio.netty.bitMode: 64 (sun.arch.data.model)
+[DEBUG] 2018-09-01 11:23:19,076 method:io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:87)
+-Dio.netty.noPreferDirect: false
+[DEBUG] 2018-09-01 11:23:19,091 method:io.netty.util.internal.NativeLibraryLoader.tmpdir(NativeLibraryLoader.java:74)
+-Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[DEBUG] 2018-09-01 11:23:19,092 method:io.netty.util.internal.NativeLibraryLoader.<clinit>(NativeLibraryLoader.java:59)
+-Dio.netty.netty.workdir: /tmp (io.netty.tmpdir)
+[DEBUG] 2018-09-01 11:23:19,140 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:98)
+-Dio.netty.allocator.numHeapArenas: 4
+[DEBUG] 2018-09-01 11:23:19,141 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:99)
+-Dio.netty.allocator.numDirectArenas: 4
+[DEBUG] 2018-09-01 11:23:19,141 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:101)
+-Dio.netty.allocator.pageSize: 8192
+[DEBUG] 2018-09-01 11:23:19,146 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:106)
+-Dio.netty.allocator.maxOrder: 11
+[DEBUG] 2018-09-01 11:23:19,147 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:110)
+-Dio.netty.allocator.chunkSize: 16777216
+[DEBUG] 2018-09-01 11:23:19,151 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:111)
+-Dio.netty.allocator.tinyCacheSize: 512
+[DEBUG] 2018-09-01 11:23:19,151 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:112)
+-Dio.netty.allocator.smallCacheSize: 256
+[DEBUG] 2018-09-01 11:23:19,151 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:113)
+-Dio.netty.allocator.normalCacheSize: 64
+[DEBUG] 2018-09-01 11:23:19,151 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:114)
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+[DEBUG] 2018-09-01 11:23:19,152 method:io.netty.buffer.PooledByteBufAllocator.<clinit>(PooledByteBufAllocator.java:115)
+-Dio.netty.allocator.cacheTrimInterval: 8192
+[DEBUG] 2018-09-01 11:23:19,185 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:90)
+-Dio.netty.processId: 1107 (auto-detected)
+[DEBUG] 2018-09-01 11:23:19,187 method:io.netty.channel.DefaultChannelId.<clinit>(DefaultChannelId.java:110)
+-Dio.netty.machineId: 28:56:5a:ff:fe:58:5f:65 (auto-detected)
+[DEBUG] 2018-09-01 11:23:19,188 method:io.netty.util.internal.ThreadLocalRandom.newSeed(ThreadLocalRandom.java:199)
+-Dio.netty.initialSeedUniquifier: 0xdddd73b72fd8be9e (took 11 ms)
+[DEBUG] 2018-09-01 11:23:19,221 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:66)
+-Dio.netty.allocator.type: pooled
+[DEBUG] 2018-09-01 11:23:19,222 method:io.netty.buffer.ByteBufUtil.<clinit>(ByteBufUtil.java:75)
+-Dio.netty.threadLocalDirectBufferSize: 65536
+[DEBUG] 2018-09-01 11:23:19,224 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:203)
+Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+[DEBUG] 2018-09-01 11:23:19,224 method:io.netty.util.NetUtil.<clinit>(NetUtil.java:241)
+/proc/sys/net/core/somaxconn: 128

@@ -1,2 +1,2 @@
-[DEBUG] 2018-08-20 09:37:31,252 method:org.Login.Login1.Login(Login1.java:60)
+[DEBUG] 2018-08-20 09:37:31,252 method:org.Control.Login1.Login(Login1.java:60)
 this is in search mysqlselect password from user where id=1

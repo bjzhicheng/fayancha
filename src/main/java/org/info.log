@@ -1,12 +1,4 @@
-[INFO ] 2018-08-31 09:53:53,782 method:org.Register.Register1.Regesit(Register1.java:66)
-电话为： 17695569629的生成id为：1566297945
-[INFO ] 2018-08-31 09:53:53,882 method:org.Register.Register1.Regesit(Register1.java:88)
-this is userorg.Register.UserDao@4dcbadb4
-[INFO ] 2018-08-31 09:53:54,352 method:org.Register.Register1.Regesit(Register1.java:93)
-register insert jdbc
-[INFO ] 2018-08-31 10:15:09,181 method:org.Login.Login1.Login(Login1.java:63)
-MYSQL login
-[INFO ] 2018-08-31 10:16:27,765 method:org.Login.Login1.Login(Login1.java:63)
-MYSQL login
-[INFO ] 2018-08-31 10:16:37,225 method:org.Login.Login1.Login(Login1.java:57)
-redis Login
+[WARN ] 2018-09-01 09:34:19,151 method:org.Control.PassChangeSend.ChangeSend(PassChangeSend.java:37)
+this is a warn in seng message:com.aliyuncs.exceptions.ClientException: SDK.ServerUnreachable : Server unreachable: java.net.UnknownHostException: dysmsapi.aliyuncs.com
+[INFO ] 2018-09-01 09:38:45,183 method:org.Control.PassChangeSend.PassChange(PassChangeSend.java:79)
+this is my change pass sqlupdate user set password='123456tttt'where id=1566297945

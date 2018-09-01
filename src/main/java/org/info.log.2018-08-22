@@ -1,4 +1,4 @@
-[INFO ] 2018-08-22 17:11:23,117 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:42)
+[INFO ] 2018-08-22 17:11:23,117 method:org.Control.PhoneChange.getphone(PhoneChange.java:42)
 this is user id：  2
-[INFO ] 2018-08-22 17:11:23,621 method:org.PhoneChange.PhoneChange.getphone(PhoneChange.java:55)
+[INFO ] 2018-08-22 17:11:23,621 method:org.Control.PhoneChange.getphone(PhoneChange.java:55)
 这是获取的手机号码： 18321346579

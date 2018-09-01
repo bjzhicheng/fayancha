@@ -1,16 +1,16 @@
-[DEBUG] 2018-08-12 13:08:11,987 method:org.Servlet.Log4jTest.main(Log4jTest.java:17)
+[DEBUG] 2018-08-12 13:08:11,987 method:org.mysevlete.Servlet.Log4jTest.main(Log4jTest.java:17)
 1234561234
-[DEBUG] 2018-08-12 13:08:11,989 method:org.Servlet.Log4jTest.main(Log4jTest.java:18)
+[DEBUG] 2018-08-12 13:08:11,989 method:org.mysevlete.Servlet.Log4jTest.main(Log4jTest.java:18)
 222222222
-[WARN ] 2018-08-12 13:08:11,989 method:org.Servlet.Log4jTest.main(Log4jTest.java:19)
+[WARN ] 2018-08-12 13:08:11,989 method:org.mysevlete.Servlet.Log4jTest.main(Log4jTest.java:19)
 1212312431
-[ERROR] 2018-08-12 13:08:11,990 method:org.Servlet.Log4jTest.main(Log4jTest.java:20)
+[ERROR] 2018-08-12 13:08:11,990 method:org.mysevlete.Servlet.Log4jTest.main(Log4jTest.java:20)
 1253534t
-[DEBUG] 2018-08-12 13:10:30,648 method:org.Servlet.Log4jTest.main(Log4jTest.java:17)
+[DEBUG] 2018-08-12 13:10:30,648 method:org.mysevlete.Servlet.Log4jTest.main(Log4jTest.java:17)
 1234561234
-[DEBUG] 2018-08-12 13:10:30,651 method:org.Servlet.Log4jTest.main(Log4jTest.java:18)
+[DEBUG] 2018-08-12 13:10:30,651 method:org.mysevlete.Servlet.Log4jTest.main(Log4jTest.java:18)
 222222222
-[WARN ] 2018-08-12 13:10:30,651 method:org.Servlet.Log4jTest.main(Log4jTest.java:19)
+[WARN ] 2018-08-12 13:10:30,651 method:org.mysevlete.Servlet.Log4jTest.main(Log4jTest.java:19)
 1212312431
-[ERROR] 2018-08-12 13:10:30,652 method:org.Servlet.Log4jTest.main(Log4jTest.java:20)
+[ERROR] 2018-08-12 13:10:30,652 method:org.mysevlete.Servlet.Log4jTest.main(Log4jTest.java:20)
 1253534t

@@ -1,0 +1,82 @@
+[INFO ] 2018-08-31 09:53:53,782 method:org.Control.Register1.Regesit(Register1.java:66)
+电话为： 17695569629的生成id为：1566297945
+[INFO ] 2018-08-31 09:53:53,882 method:org.Control.Register1.Regesit(Register1.java:88)
+this is userorg.Register.UserDao@4dcbadb4
+[INFO ] 2018-08-31 09:53:54,352 method:org.Control.Register1.Regesit(Register1.java:93)
+register insert jdbc
+[INFO ] 2018-08-31 10:15:09,181 method:org.Control.Login1.Login(Login1.java:63)
+MYSQL login
+[INFO ] 2018-08-31 10:16:27,765 method:org.Control.Login1.Login(Login1.java:63)
+MYSQL login
+[INFO ] 2018-08-31 10:16:37,225 method:org.Control.Login1.Login(Login1.java:57)
+redis Login
+[INFO ] 2018-08-31 10:29:35,742 method:org.Control.PhoneChange.getphone(PhoneChange.java:45)
+this is user id：  1566297945
+[INFO ] 2018-08-31 10:29:36,116 method:org.Control.PhoneChange.getphone(PhoneChange.java:58)
+这是获取的手机号码： 17695569629
+[INFO ] 2018-08-31 12:35:04,973 method:org.Control.Login1.Login(Login1.java:54)
+redis Login
+[INFO ] 2018-08-31 13:17:06,998 method:org.Control.PhoneChange.getphone(PhoneChange.java:48)
+this is user id：  1566297945
+[INFO ] 2018-08-31 13:17:07,303 method:org.Control.PhoneChange.getphone(PhoneChange.java:61)
+这是获取的手机号码： 17695569629
+[ERROR] 2018-08-31 13:47:17,518 method:org.mainServer.Server$2.run(Server.java:85)
+Inbound Server crash!!!
+java.io.IOException: bind() failed: 地址已在使用
+	at io.netty.channel.epoll.Native.newIOException(Native.java:124)
+	at io.netty.channel.epoll.Native.bind(Native.java:390)
+	at io.netty.channel.epoll.EpollServerSocketChannel.doBind(EpollServerSocketChannel.java:62)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:554)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1237)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeBindNow(ChannelHandlerInvokerUtil.java:109)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeBind(DefaultChannelHandlerInvoker.java:214)
+	at io.netty.channel.PausableChannelEventExecutor.invokeBind(PausableChannelEventExecutor.java:101)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:481)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:1013)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:236)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:254)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+[ERROR] 2018-08-31 13:47:50,286 method:org.mainServer.Server$2.run(Server.java:85)
+Inbound Server crash!!!
+java.io.IOException: bind() failed: 地址已在使用
+	at io.netty.channel.epoll.Native.newIOException(Native.java:124)
+	at io.netty.channel.epoll.Native.bind(Native.java:390)
+	at io.netty.channel.epoll.EpollServerSocketChannel.doBind(EpollServerSocketChannel.java:62)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:554)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1237)
+	at io.netty.channel.ChannelHandlerInvokerUtil.invokeBindNow(ChannelHandlerInvokerUtil.java:109)
+	at io.netty.channel.DefaultChannelHandlerInvoker.invokeBind(DefaultChannelHandlerInvoker.java:214)
+	at io.netty.channel.PausableChannelEventExecutor.invokeBind(PausableChannelEventExecutor.java:101)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:481)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:1013)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:236)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:357)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:328)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:254)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+[INFO ] 2018-08-31 14:12:40,540 method:org.Control.GetHetong.get(GetHetong.java:95)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-31 14:33:41,802 method:org.Control.Login1.Login(Login1.java:55)
+redis Login
+[INFO ] 2018-08-31 14:35:54,948 method:org.Control.DeleteHetong.delete(DeleteHetong.java:32)
+this is my delete sql   delete from hetong where id='123_http:uiw/wew/eww/ewwrw221/'
+[INFO ] 2018-08-31 14:36:20,919 method:org.Control.GetHetong.get(GetHetong.java:96)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-31 14:36:21,308 method:org.Control.GetHetong.get(GetHetong.java:117)
+this is my sql  select url from hetong where id ='2_htttp://8080//hhh'
+[INFO ] 2018-08-31 14:36:21,311 method:org.Control.GetHetong.get(GetHetong.java:126)
+this is url from sql htttp://8080//hhh
+[INFO ] 2018-08-31 14:38:47,083 method:org.Control.GetHetong.get(GetHetong.java:96)
+合同的id是  2_htttp://8080//hhh
+[INFO ] 2018-08-31 14:38:47,313 method:org.Control.GetHetong.get(GetHetong.java:110)
+this is my url from redis "htttp://8080//hhh"
+[INFO ] 2018-08-31 14:42:34,939 method:org.Control.Login1.Login(Login1.java:55)
+redis Login
