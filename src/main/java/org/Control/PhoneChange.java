@@ -141,15 +141,16 @@ Jedis redijs6382=new Jedis(HOST,6382);
         }else {state.setState(0);}
         redijs6382.close();
 
-return state;
-    }
+      return state;
+     }
 
 
 
 
     //接受到前段验证码，若正确，数据罗盘 redis 更新
 
-    public State SaveChange(PhoneDao newphoneuser) {
+    public State SaveChange(PhoneDao newphoneuser) throws SQLException {
+        Connection connection=null;
         State state = new State();
         String getphone = newphoneuser.getPhonenumber();
         String getyanzhengma = newphoneuser.getYanzhengma();
@@ -170,7 +171,7 @@ return state;
         LOGGER.info("redis  get phone+message= " + phone + "  " + yanzhengma);
         if (phone.equals(getphone) && (yanzhengma.equals(getyanzhengma))) {
             PreparedStatement pstm = null;
-            Connection connection = JDBCConnection.getconnection();
+            connection = JDBCConnection.getconnection();
             String sql = "update user set phonenumber=" + "'" + getphone + "'" + "where id =" + getid;
             LOGGER.info("this is my update sql " + sql);
             try {
@@ -180,7 +181,7 @@ return state;
                 state.setState(iii);
             } catch (SQLException e) {
                 LOGGER.warn("this is in create statement " + e);
-            }
+            }connection.close();
 
 
             return state;

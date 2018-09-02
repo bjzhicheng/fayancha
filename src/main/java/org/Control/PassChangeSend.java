@@ -88,6 +88,11 @@ public class PassChangeSend {
                         state2.setState(0);
 
                     }
+                    try {
+                        connection.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
 
 
                 }else state2.setState(0);

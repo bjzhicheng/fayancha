@@ -11,7 +11,7 @@ public class Test {
     public static void main(String[] args) {
         Send smsDemo=new Send();
 
-        String phone="15510828597";
+        String phone="18622480776";
         int response=0;
         try {
             response = smsDemo.sendSms(phone);

@@ -5,9 +5,7 @@ import org.Util.State;
 import org.apache.log4j.PropertyConfigurator;
 
 /**
- * @Author: yanshilong
- * @Date: 18-8-19 下午2:43
- * @Version 1.0
+ * @Author: yanshilong * @Version 1.0
  */
 public class Test {
     public static void main(String[] args) {

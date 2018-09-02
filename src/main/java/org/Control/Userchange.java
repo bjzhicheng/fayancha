@@ -42,6 +42,11 @@ String sql="update user set name="+"'"+userDao.getName()+"'"+","+"weixin="+"'"
         } catch (SQLException e) {
             LOGGER.warn("this is in create statement "+e);
         }
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
 
         return state;

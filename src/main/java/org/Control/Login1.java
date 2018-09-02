@@ -85,7 +85,12 @@ public class Login1{
               LOGGER.debug("THIS IS IN CREATE STATEMENT"+e);
             }
 
-
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            ;
         }
 
 

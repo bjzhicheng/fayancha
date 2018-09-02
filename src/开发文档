@@ -1,3 +1,4 @@
 redis 6382  短信验证60s  key=phonenumber   value=SendMessage
 redis 6379  登陆         key=phonenumber  value=password
 redis 6381  合同存储       key=合同id      value=合同
+redis 6380 新闻存储        key=新闻id     values =json 对象

@@ -1,8 +1,10 @@
 package org.Util;
 
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -24,7 +26,7 @@ public class JdbcPool {
 
         try {
             String driver = "com.mysql.jdbc.Driver";
-            String url = "jdbc:mysql://localhost:3306/share?useUnicode=true&characterEncoding=utf-8";
+            String url = "jdbc:mysql://localhost:3306/law?useUnicode=true&characterEncoding=utf-8";
             String username = "root";
             String password = "123456";
             //数据库连接池的初始化连接数大小
