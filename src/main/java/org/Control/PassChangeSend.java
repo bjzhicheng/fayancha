@@ -1,7 +1,7 @@
 package org.Control;
 
 import com.aliyuncs.exceptions.ClientException;
-import org.PassChange.PassDao;
+import org.DaoTest.PassChange.PassDao;
 import org.Util.JDBCConnection;
 import org.Util.Send;
 import org.Util.State;

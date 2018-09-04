@@ -1,4 +1,4 @@
-package org.PassChange;
+package org.DaoTest.PassChange;
 
 import org.Control.PassChangeSend;
 import org.Util.State;

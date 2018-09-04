@@ -66,7 +66,7 @@ public class Register1 {
 
         int  tid=MakeUuid.Make();
 
-        LOGGER.info("电话为： "+tuserphone +"的生成id为："+tid);
+        LOGGER.info("接受电话为： "+tuserphone +"的生成id为："+tid+"接受到的验证码是："+tyanzhengma);
 
 
 
@@ -87,8 +87,9 @@ public class Register1 {
            while (iterator.hasNext()){
                String phone1= (String) iterator.next();
                yanzhengma=jedis6382.get(phone1);
-               System.out.println("这位用户的电话是： "+phone1+"验证码是 "+yanzhengma);
+               System.out.println("redis里面查询出 这位用户的电话是： "+phone1+"验证码是 "+yanzhengma);
                LOGGER.info("this is user"+newuser);
+               System.out.println("用户"+newuser);
            }
         if(yanzhengma.equals(tyanzhengma)){
                //数据罗苦罗盘

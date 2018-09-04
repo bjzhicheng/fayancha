@@ -1,4 +1,4 @@
-package org.PassChange;
+package org.DaoTest.PassChange;
 
 /**
  * @Author: yanshilong

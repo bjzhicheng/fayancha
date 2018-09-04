@@ -26,10 +26,14 @@ public class Test {
 
 
 
+
+
+
+
                  UserDao ruser=new UserDao();
-                 ruser.setPhonenumber("17695569629");
-                 ruser.setPass("yan123456");
-                 ruser.setYanzhengma("2323");
+                 ruser.setPhonenumber("18649145663");
+                 ruser.setPass("dfgrty555");
+                 ruser.setYanzhengma("1028");
 
                  Register1 register1=new Register1();
         State state=new State();
