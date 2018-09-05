@@ -12,7 +12,9 @@ public class Test {
     public static void main(String[] args) {
         PropertyConfigurator.configure("/home/syl/project/Law/src/main/java/org/log4j.properties");
         Getvideos getvideos=new Getvideos();
-        String json=getvideos.GetAllVideos();
+        VideosDao videosDao=new VideosDao();
+        videosDao.setId(3);
+        String json=getvideos.GetOneVIdeos(videosDao);
         System.out.println(json);
     }
 }

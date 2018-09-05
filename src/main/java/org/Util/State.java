@@ -8,6 +8,25 @@ package org.Util;
 public class State {
     private int id;
     private int state;
+    private double account;
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    private String pass;
+
+    public double getAccount() {
+        return account;
+    }
+
+    public void setAccount(double account) {
+        this.account = account;
+    }
 
     public int getId() {
         return id;
