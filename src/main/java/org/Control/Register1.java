@@ -31,6 +31,7 @@ public class Register1 {
         String yanzhengma = null;
        Jedis jedis6382=new Jedis("127.0.0.1",6382);
         String phone=userDao.getPhonenumber();
+        System.out.println("获取前端的手机号为：1 "+phone);
         Send send=new Send();
         try {
            n=send.sendSms(phone);
@@ -60,13 +61,13 @@ public class Register1 {
            PreparedStatement pstm=null;
            State state=new State();//表示是否插入成功
 
-        String tuserpass=newuser.getPass();
-        String tuserphone=newuser.getPhonenumber();
-        String tyanzhengma=newuser.getYanzhengma();
+           String tuserpass=newuser.getPassword();
+           String tuserphone=newuser.getPhonenumber();
+           String tyanzhengma=newuser.getYanzhengma();
 
         int  tid=MakeUuid.Make();
 
-        LOGGER.info("接受电话为： "+tuserphone +"的生成id为："+tid+"接受到的验证码是："+tyanzhengma);
+        LOGGER.info("接受电话为： "+tuserphone +"的生成id为："+tid+"接受到的验证码是："+tyanzhengma+"接受到的密码 "+tuserpass);
 
 
 
@@ -88,20 +89,34 @@ public class Register1 {
                String phone1= (String) iterator.next();
                yanzhengma=jedis6382.get(phone1);
                System.out.println("redis里面查询出 这位用户的电话是： "+phone1+"验证码是 "+yanzhengma);
-               LOGGER.info("this is user"+newuser);
-               System.out.println("用户"+newuser);
+               LOGGER.info("this is user mima   "+newuser.getPassword());
+               System.out.println("用户id    "+tid);
            }
         if(yanzhengma.equals(tyanzhengma)){
                //数据罗苦罗盘
             Connection connection=JDBCConnection.getconnection();
             LOGGER.info("register insert jdbc");
+
+            LOGGER.info("这里正在生成注册优惠券======================================");
+            Jedis jedis6385=new Jedis("127.0.0.1",6385);
+            String rid=String.valueOf(tid);
+            jedis6385.set(rid,String.valueOf(1));
+            jedis6385.expire(rid,30*24*3600);
+            jedis6385.close();
+            LOGGER.info("----------------------------");
+            LOGGER.info("优惠券生成成功");
+
+
+
             String sql="insert into user(id,password,phonenumber) values"+"(?,?,?)";
+            LOGGER.info("this is my sql   "+sql);
             try {
                 pstm=(PreparedStatement) connection.prepareStatement(sql);
                 pstm.setInt(1,tid);
                 pstm.setString(2,tuserpass);
                 pstm.setString(3,tuserphone);
                 state.setState(pstm.executeUpdate());
+                state.setId(tid);
             } catch (SQLException e) {
                 LOGGER.debug("this is in patm"+e);
             }

@@ -66,7 +66,7 @@ public class PhoneChange{
     }
 
 
-    //================================================================================================================================
+    //=====================================================================================================
 
 
      // 2------Phonechange(PhoneDao changer)//发送信息，获取电话，发送验证码=================================================================
@@ -95,7 +95,7 @@ return  state;
     //3  获取验证码  判断get 验证码 余 redis 李存储的是否.equals  return state=1
 
     public State PhoneChackchange(PhoneDao checker){
-        State state=new State();
+             State state=new State();
              String realmessage=null;
 
 
@@ -147,7 +147,7 @@ Jedis redijs6382=new Jedis(HOST,6382);
 
 
 
-    //接受到前段验证码，若正确，数据罗盘 redis 更新
+        //接受到前段验证码，若正确，数据罗盘 redis 更新
 
     public State SaveChange(PhoneDao newphoneuser) throws SQLException {
         Connection connection=null;

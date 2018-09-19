@@ -7,7 +7,7 @@ this is my update sql   update user set name='change',weixin='yan123456',natives
 [INFO ] 2018-08-21 17:10:37,819 method:org.Control.Userchange.Userchange(Userchange.java:26)
 this is my update sql   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader'where id=2
 [INFO ] 2018-08-21 17:11:13,242 method:org.Control.Userchange.Userchange(Userchange.java:26)
-this is my update sql   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader' where id=2
+this is my update cccc   update user set name='change',weixin='yan123456',nativespace='beijing test',companyname='yi jia gou ',position='leader' where id=2
 [INFO ] 2018-08-21 17:13:11,047 method:org.Control.Userchange.Userchange(Userchange.java:28)
 this is my update sql   update user set name='change',weixin='yan1234567',nativespace='beijing test',companyname='yi jia gou ',position='leader' where id=2
 [INFO ] 2018-08-21 17:50:59,667 method:org.Control.PhoneChange.getphone(PhoneChange.java:41)

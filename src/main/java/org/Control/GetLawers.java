@@ -4,6 +4,7 @@ package org.Control;
 import com.alibaba.fastjson.JSON;
 import org.DaoTest.Lawers.*;
 import org.Util.JdbcPool;
+import org.Util.State;
 import org.apache.log4j.Logger;
 
 ;
@@ -31,19 +32,21 @@ public class GetLawers {
         coon=(Connection) JdbcPool.get();
         return coon;
     }
+    State state=new State();
 
 
-    public String GetAll(){
+    public State GetAll(){
 
        ArrayList<LawersDao> arrayList=new ArrayList<>();
         String json=null;
-        LawersDao lawer=new LawersDao();
+
         Connection connection=null;
       connection=getcoon();
 
         String sql="select id,name,nativespace,belongs,shanchang,phonenumber from lawers ";
         LOGGER.info("this is my sql "+sql);
         try {
+            LawersDao lawer=new LawersDao();
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(sql);
 
@@ -57,6 +60,7 @@ public class GetLawers {
                arrayList.add(lawer);
             }
              json=JSON.toJSONString(arrayList);
+            state.setMessage(json);
 
 connection.close();
 
@@ -65,15 +69,15 @@ connection.close();
         }
 
 
-        return json;
+        return state;
     }
 
 
 
-    public String Getsome(LawersDao xianzhi){
+    public State Getsome(LawersDao xianzhi){
         ArrayList <LawersDao> arrayList=new ArrayList<>();
         String json=null;
-        LawersDao lawer=new LawersDao();
+
         Connection connection=null;
         connection=getcoon();
 
@@ -81,10 +85,13 @@ connection.close();
                 "where nativespace like  "+"'"+xianzhi.getNativespace()+"%' and "+"shanchang " +
                 "like"+"'"+xianzhi.getShanchang()+"%'";
           LOGGER.info("this is my sql "+sql);
-        try { Statement statement=connection.createStatement();
+        try {
+
+            Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(sql);
 
             while (resultSet.next()){
+                LawersDao lawer=new LawersDao();
                 lawer.setId(resultSet.getInt("id"));
                 lawer.setPhonenumber(resultSet.getString("phonenumber"));
                 lawer.setName(resultSet.getString("name"));
@@ -95,6 +102,8 @@ connection.close();
                 arrayList.add(lawer);
             }
            json=JSON.toJSONString(arrayList);
+            state.setState(1);
+            state.setMessage(json);
             connection.close();
 
         } catch (SQLException e) {
@@ -105,7 +114,7 @@ connection.close();
         }
 
 
-        return json;
+        return state;
     }
 
 

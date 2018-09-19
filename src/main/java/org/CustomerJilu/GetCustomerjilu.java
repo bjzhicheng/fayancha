@@ -1,4 +1,4 @@
-package org.Control.CustomerJilu;
+package org.CustomerJilu;
 
 /**
  * @Author: yanshilong

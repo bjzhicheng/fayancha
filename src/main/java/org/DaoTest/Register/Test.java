@@ -32,7 +32,7 @@ public class Test {
 
                  UserDao ruser=new UserDao();
                  ruser.setPhonenumber("18649145663");
-                 ruser.setPass("dfgrty555");
+                 ruser.setPassword("dfgrty555");
                  ruser.setYanzhengma("1028");
 
                  Register1 register1=new Register1();

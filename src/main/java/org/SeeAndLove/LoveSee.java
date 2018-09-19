@@ -14,8 +14,9 @@ public class LoveSee {
   Logger LOGGER=Logger.getLogger(LoveSee.class);
   Connection connection=null;
 
-  public  void See(UserDao userDao){}
 
-  public  void Love(UserDao userDao){}
+  public  void GetSee(UserDao userDao){}
+
+  public  void GetLove(UserDao userDao){}
 
 }

@@ -16,6 +16,15 @@ public class NewsDao {
 //            +-------+--------------+------+-----+---------+-------+
 //            5 rows in set (0.00 sec)
     private  int id;
+    private String message;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public int getId() {
         return id;

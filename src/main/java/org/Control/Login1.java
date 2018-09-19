@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -36,21 +38,35 @@ public class Login1{
         state.setState(0);
 
         System.out.println("前段传入的手机号是："+user.getPhonenumber()+"  密码是"+user.getPassword());
-        String unimber=null;
-        String upass=null;
+        String unimber="";
+        String upass="";
+        int uid=0;
         String pass=user.getPassword();
         Jedis jedis6379=new Jedis("127.0.0.1",6379);
         Set ss=jedis6379.keys(user.getPhonenumber());
         Iterator iterator=ss.iterator();
         while(iterator.hasNext()){
             unimber= (String) iterator.next();
-              upass=jedis6379.get(unimber);
-            System.out.println("redis获取到手机号："+unimber+"   密码："+upass);
+              String map=jedis6379.get(unimber);
+            String bb=map.replaceAll("\\{|}","");
+            System.out.println(bb);
+
+            String [] result=bb.split("=");
+            System.out.println(result[0]);
+            System.out.println(result[1]);
+              upass=result[0];
+              uid=Integer.parseInt(result[1]);
+
+
+
+
+            System.out.println("redis获取到手机号："+unimber+"   密码："+upass+"用户id： "+uid);
 
         }
         if(upass.equals(user.getPassword())&&(unimber.equals(user.getPhonenumber()))){
 
             state.setState(1);
+            state.setId(uid);
             System.out.println("从redis内匹配到用户");
             LOGGER.info("redis Login");
 
@@ -69,14 +85,25 @@ public class Login1{
                 if (rs.next()){
                     unimber=rs.getString("phonenumber");
                     upass=rs.getString("password");
+                    uid=rs.getInt("id");
+
                     if((unimber.equals(user.getPhonenumber()))&&(pass.equals(upass))){
                         state.setState(1);
+                        state.setId(uid);
 
 
-                        jedis6379.set(user.getPhonenumber(),user.getPassword());
+//                        ArrayList array=new ArrayList();
+//                        array.add(user.getPassword());
+//                        array.add(uid);
+                        HashMap hashMap=new HashMap();
+                        hashMap.put(upass,uid);//key= pass value=id
+
+
+                        jedis6379.set(user.getPhonenumber(),String.valueOf(hashMap));
+
                         jedis6379.expire(user.getPhonenumber(),30*24*60);
                         //设置失效时间
-                        System.out.println("JEDIS更新了一条数据  key="+user.getPhonenumber()+"value="+user.getPassword());
+                        System.out.println("JEDIS更新了一条数据  key="+user.getPhonenumber()+"value="+String.valueOf(hashMap));
                           jedis6379.close();
                     }
 
@@ -90,7 +117,7 @@ public class Login1{
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            ;
+
         }
 
 

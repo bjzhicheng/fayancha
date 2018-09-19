@@ -16,7 +16,7 @@ public class Test {
         PayUser payUser=new PayUser();
         payUser.setId(1234);
         payUser.setPassword("yan1234");
-        payUser.setShouldaccount(1);
+        payUser.setShouldaccount(40);
         State state=pay.PayMoney(payUser);
         System.out.println(state.getState());
     }

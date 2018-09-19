@@ -99,7 +99,7 @@ public class TetsPost {
 //            out.append(new Gson().toJson(new User(
 //                    "静宝7721","women", "12345678912")));
             UserDao userDao=new UserDao();
-            userDao.setPass("123456");
+            userDao.setPassword("123456");
             userDao.setPhonenumber("17602648919");
             out.append(new Gson().toJson(userDao));
 //            out.append("{\"server\":\"number\",\"number\":\"不对是零二六三8919\"}");

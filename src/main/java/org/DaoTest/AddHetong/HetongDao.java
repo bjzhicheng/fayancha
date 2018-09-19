@@ -8,6 +8,7 @@ package org.DaoTest.AddHetong;
 public class HetongDao {
     private String id;
     private String url;
+    private String message;
 
     public String getId() {
         return id;
@@ -35,6 +36,14 @@ public class HetongDao {
 
     public String getTime() {
         return time;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     public void setTime(String time) {

@@ -2,6 +2,7 @@ package org.Control;
 
 import org.DaoTest.AddHetong.HetongDao;
 import org.Util.JDBCConnection;
+import org.Util.State;
 import org.apache.log4j.Logger;
 import redis.clients.jedis.Jedis;
 
@@ -24,13 +25,15 @@ import java.util.Date;
 public class Addhetong {
     static Logger LOGGER=Logger.getLogger(Addhetong.class);
 
-    public  int addhetong(HetongDao hetong){
+    public State addhetong(HetongDao hetong){
         String id=hetong.getId()+"_"+hetong.getUrl();
+        State state=new State();
         int loves=0;
         String url=hetong.getUrl();
         String title=hetong.getTitle();
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy.MM.dd");
         String time= simpleDateFormat.format(new Date());
+        String mess=hetong.getMessage();
         Connection connection=JDBCConnection.getconnection();
         Jedis jedis=new Jedis("127.0.0.1",6381);
         jedis.set(id,url);
@@ -41,7 +44,7 @@ public class Addhetong {
 
 
 
-        String sql="insert into hetong (id,url,loves,title,time)"+"values"+"(?,?,?,?,?)";
+        String sql="insert into hetong (id,url,loves,title,time,message)"+"values"+"(?,?,?,?,?,?)";
         PreparedStatement pstm=null;
         int i=0;
         try {
@@ -51,7 +54,9 @@ public class Addhetong {
             pstm.setInt(3,loves);
             pstm.setString(4,title);
             pstm.setString(5,time);
+            pstm.setString(6,mess);
             i=pstm.executeUpdate();
+            state.setState(i);
         } catch (SQLException e) {
             LOGGER.debug("this is in patm "+e);
         }
@@ -61,7 +66,7 @@ public class Addhetong {
         } catch (SQLException e) {
             LOGGER.debug("this is in close pstm coon"+e);
         }
-        return i;
+        return state;
     }
 
 

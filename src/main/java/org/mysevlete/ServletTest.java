@@ -1,11 +1,16 @@
 package org.mysevlete;
 
 
+import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
 
-import org.Control.Login1;
-import org.Control.Register1;
+import org.Control.*;
+import org.DaoTest.AddHetong.HetongDao;
+import org.DaoTest.HeTong.GetDao;
+import org.DaoTest.Lawers.LawersDao;
 import org.DaoTest.Login.User;
+import org.DaoTest.News.NewsDao;
+import org.DaoTest.PhoneChange.PhoneDao;
 import org.DaoTest.Register.UserDao;
 import org.Util.Message;
 import org.Util.State;
@@ -44,20 +49,20 @@ public class ServletTest {
 //
         try {
 
-            LOGGER.info("请求的资源： Control"+result[1]+result[2]);
+            LOGGER.info("请求的资源： Control."+result[1]+result[2]);
             //result[1]=============类名
             //result[2]==============方法名
 
                  //登陆=========================================================================================================
             switch (result[1]){
                 case "Login1":
-                    cls=Class.forName("Control"+result[1]);
+                    cls=Class.forName("org.Control."+result[1]);
 
                     con=cls.getConstructor();
                     Login1 login1=(Login1) con.newInstance();
                         Method dologin=cls.getMethod(result[2],User.class);
-                        int state1= (int) dologin.invoke(login1,new Gson().fromJson(gson,User.class));
-                    state.setState(state1);
+                        state= (State) dologin.invoke(login1,new Gson().fromJson(gson,User.class));
+//                    state.setState(state1);
                     return state;
 
                     //注册======================================================================================================
@@ -74,7 +79,61 @@ public class ServletTest {
 
                     return state;
 
-                    //添加合同=====================================================================================================
+                    //手机号变更=====================================================================================================
+                case "PhoneChange":
+                    cls=Class.forName("org.Control."+result[1]);
+                    con=cls.getConstructor();
+                    PhoneChange phoneChange1= (PhoneChange) con.newInstance();
+                    Method dophonechange=cls.getMethod(result[2],PhoneDao.class);
+                    state= (State) dophonechange.invoke(phoneChange1,new Gson().fromJson(gson,PhoneDao.class));
+
+                    return state;
+
+
+                    //收藏合同
+                case "Addhetong":
+                    cls=Class.forName("org.Control."+result[1]);
+                    con=cls.getConstructor();
+                    Addhetong addhetong1= (Addhetong) con.newInstance();
+                    Method doaddhetong=cls.getMethod(result[2],HetongDao.class);
+                    state= (State) doaddhetong.invoke(addhetong1,new Gson().fromJson(gson,HetongDao.class));
+
+                    return state;
+                    //查看收藏合同
+
+                case "GetHetong":
+                    cls=Class.forName("org.Control."+result[1]);
+                    con=cls.getConstructor();
+                    GetHetong gethetong= (GetHetong) con.newInstance();
+                    Method dogethetong=cls.getMethod(result[2],GetDao.class);
+//                    Gson json= (Gson) dogethetong.invoke(gethetong,new Gson().fromJson(gson,GetDao.class));
+//
+//                    return json;
+
+
+
+
+
+                    //查找律师
+
+                case "GetLawers":
+                    cls=Class.forName("org.Control."+result[1]);
+                    con=cls.getConstructor();
+                    GetLawers getLawers= (GetLawers) con.newInstance();
+                    Method dogetlawers=cls.getMethod(result[2],LawersDao.class);
+                    state=(State)dogetlawers.invoke(getLawers,new Gson().fromJson(gson,LawersDao.class));
+                    return state;
+
+
+                    //获取新闻
+                case  "GetNews":
+                    cls=Class.forName("org.Control."+result[1]);
+                    con=cls.getConstructor();
+                    GetNews getNews= (GetNews) con.newInstance();
+                    Method dogetnews=cls.getMethod(result[2],NewsDao.class);
+                    state= (State) dogetnews.invoke(getNews,new Gson().fromJson(gson,NewsDao.class));
+                    return state;
+
 
 
 

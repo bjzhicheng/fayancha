@@ -1,9 +1,12 @@
 package org.Control;
 
+import org.CustomerJilu.AddCustomer;
+import org.CustomerJilu.CustomerDao;
 import org.Pay.GetBalancePass;
 import org.Pay.PayUser;
 import org.Pay.Update;
 import org.Pay.User;
+import org.Util.GetTime;
 import org.Util.State;
 import org.Util.WorkThreadPool;
 import org.apache.log4j.Logger;
@@ -45,6 +48,18 @@ public class Pay {
          final User user=new User();
          user.setId(qianid);
          user.setAccount(temp.doubleValue());
+
+
+        final CustomerDao customerDao=new CustomerDao();
+        customerDao.setId(String.valueOf(qianid));
+        GetTime getTime=new GetTime();
+        customerDao.setTime(getTime.GetnowTime());
+        customerDao.setType("消费");
+        customerDao.setUseaccount(xuqiuaccount.doubleValue());
+        customerDao.setYuaccount(account.doubleValue());
+
+
+
          if(qianpass.equals(realpass)){
 
 
@@ -52,10 +67,15 @@ public class Pay {
               Runnable run=new Runnable() {
                   @Override
                   public void run() {
-                      Update.Doupdate(user);
+
+                       Update.Doupdate(user);
+                      AddCustomer.AddoneCustomer(customerDao);
+
                   }
               };
               WorkThreadPool.pool.submit(run);
+
+
             //WorkThreadPool.pool.execute(run);
 
 

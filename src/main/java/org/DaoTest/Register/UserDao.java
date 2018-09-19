@@ -15,7 +15,16 @@ public class UserDao {
     }
 
     private int id;
-    private String pass;
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     private String phonenumber;
     private  String yanzhengma;
 
@@ -27,13 +36,7 @@ public class UserDao {
         this.id = id;
     }
 
-    public String getPass() {
-        return pass;
-    }
 
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
 
     public String getPhonenumber() {
         return phonenumber;

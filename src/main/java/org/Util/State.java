@@ -9,6 +9,15 @@ public class State {
     private int id;
     private int state;
     private double account;
+    private String message;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public String getPass() {
         return pass;

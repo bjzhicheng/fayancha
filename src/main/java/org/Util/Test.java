@@ -11,7 +11,7 @@ public class Test {
     public static void main(String[] args) {
         Send smsDemo=new Send();
 
-        String phone="18622480776";
+        String phone="18089218760";
         int response=0;
         try {
             response = smsDemo.sendSms(phone);
@@ -19,9 +19,12 @@ public class Test {
         } catch (ClientException e) {
             e.printStackTrace();
         }
-//        SendSmsResponse response = sendSms(user);
+       // SendSmsResponse response = sendSms(user);
 
 
+//        GetTime getTime=new GetTime();
+//        String aa=getTime.GetnowTime();
+//        System.out.println(aa);
     }
     }
 

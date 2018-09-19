@@ -26,6 +26,8 @@ import java.util.concurrent.Executors;
  * @Version 1.0
  */
 public class Server {
+
+
     private static Logger log = Logger.getLogger(Server.class);
     //https://blog.csdn.net/xiangzhihong8/article/details/52029446
     public void startinbound(int port) throws Exception {

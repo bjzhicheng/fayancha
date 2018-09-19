@@ -1,6 +1,8 @@
 package org.DaoTest.News;
 
+import com.alibaba.fastjson.JSON;
 import org.Control.GetNews;
+import org.Util.State;
 import org.apache.log4j.PropertyConfigurator;
 
 /**
@@ -12,14 +14,15 @@ public class Test {
     public static void main(String[] args) {
         PropertyConfigurator.configure("/home/syl/project/Law/src/main/java/org/log4j.properties");
         GetNews getNews=new GetNews();
-//        String aa=getNews.GetAll();
+        State state=getNews.GetAll();
 //        System.out.println(aa);
 
-        String rrr=null;
-        NewsDao newsDao=new NewsDao();
-        newsDao.setId(3);
-        rrr=getNews.GetOneNews(newsDao);
-        System.out.println(rrr);
+//        String rrr=null;
+//        NewsDao newsDao=new NewsDao();
+//        newsDao.setId(3);
+       // State state =getNews.GetOneNews(newsDao);
+        String ss=JSON.toJSONString(state);
+        System.out.println(ss);
 
     }
 }

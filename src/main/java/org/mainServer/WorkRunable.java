@@ -57,7 +57,7 @@ public class WorkRunable implements Runnable{
         try {
             State state= ServletTest.doServlet(this.message);
             String res=new Gson().toJson(state);
-            System.out.println("res-----------");
+            System.out.println("res-----------"+res);
             FullHttpResponse response = null;
             response = new DefaultFullHttpResponse(HTTP_1_1,
                     OK, Unpooled.wrappedBuffer(res.getBytes("UTF-8")));

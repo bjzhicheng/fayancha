@@ -12,11 +12,11 @@ public class Test {
     public static void main(String[] args) {
 
 
-        PropertyConfigurator.configure("/home/syl/Law/src/main/java/org/log4j.properties");
+        PropertyConfigurator.configure("/home/syl/project/Law/src/main/java/org/log4j.properties");
 
         HetongDao hetongDao=new HetongDao();
 
-        hetongDao.setId("123");
+        hetongDao.setId("1243");
         hetongDao.setLoves(1020);
         hetongDao.setTitle("test121hhhh");
         hetongDao.setUrl("http:uiw/wew/eww/ewwrw221/");
