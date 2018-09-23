@@ -58,13 +58,19 @@ public class WorkRunable implements Runnable{
             State state= ServletTest.doServlet(this.message);
             String res=new Gson().toJson(state);
             System.out.println("res-----------"+res);
+
+
             FullHttpResponse response = null;
             response = new DefaultFullHttpResponse(HTTP_1_1,
                     OK, Unpooled.wrappedBuffer(res.getBytes("UTF-8")));
             response.headers().set(CONTENT_TYPE, "application/json");
             response.headers().setInt(CONTENT_LENGTH,
                     response.content().readableBytes());
+
+          //kua yu
             response.headers().set(ACCESS_CONTROL_ALLOW_ORIGIN,"*");
+
+
             if (HttpHeaderUtil.isKeepAlive(this.message.getFhr())) {
                 response.headers().set(CONNECTION, KEEP_ALIVE);
             }

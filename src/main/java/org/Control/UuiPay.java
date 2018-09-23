@@ -43,7 +43,7 @@ public class UuiPay {
 
         if(num>0){
             final CustomerDao customerDao=new CustomerDao();
-            customerDao.setId(getid);
+            customerDao.setId(iid);
             GetTime getTime=new GetTime();
             customerDao.setTime(getTime.GetnowTime());
             customerDao.setType("优惠券消费");
@@ -62,8 +62,9 @@ public class UuiPay {
         }else {
 
 
-            Pay pay=new Pay();
-            state=pay.PayMoney(payuser);
+//            Pay pay=new Pay();
+//            state=pay.PayMoney(payuser);
+            state.setState(0);
         }
 
         return state;

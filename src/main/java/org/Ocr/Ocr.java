@@ -11,12 +11,14 @@ import java.util.HashMap;
  * @Date: 18-9-16 上午11:06
  * @Version 1.0
  */
-public class Ocr {
+public class
+Ocr {
     public static final String APP_ID = "11790704";
     public static final String API_KEY = "EVKfOuLdQhg9PLoIOzZo545v";
     public static final String SECRET_KEY = "KO8cTEqAiIumcqSFUhnUagKv4Iy6qKxX";
 
     public String DoOcr(String path) {
+
         String message = "";
         String fanhui=null;
         AipOcr client = new AipOcr(APP_ID, API_KEY, SECRET_KEY);
@@ -29,13 +31,14 @@ public class Ocr {
         JSONObject res = client.basicGeneral(path, new HashMap<String, String>());
         message = res.toString();
 
+       // System.out.println(message);
         String[] aa=message.split("words|:");
         System.out.println("长度为：  "+aa.length);
         for(int i=0;i<aa.length;i++){
                  aa[i]=aa[i].replaceAll("\\{|}","");
             //aa[i]=aa[i].replaceAll("\\}","");
             aa[i]=aa[i].replaceAll("\"|log_id|result|u2026|_result_num|[|]","");
-            System.out.println(aa[i]);
+           // System.out.println(aa[i]);
             fanhui=fanhui+aa[i];
         }
         // System.out.println(res);

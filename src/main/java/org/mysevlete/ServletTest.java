@@ -10,8 +10,11 @@ import org.DaoTest.HeTong.GetDao;
 import org.DaoTest.Lawers.LawersDao;
 import org.DaoTest.Login.User;
 import org.DaoTest.News.NewsDao;
+import org.DaoTest.PassChange.PassDao;
 import org.DaoTest.PhoneChange.PhoneDao;
 import org.DaoTest.Register.UserDao;
+import org.GetVideos.VideosDao;
+import org.Pay.PayUser;
 import org.Util.Message;
 import org.Util.State;
 import org.apache.log4j.Logger;
@@ -53,7 +56,7 @@ public class ServletTest {
             //result[1]=============类名
             //result[2]==============方法名
 
-                 //登陆=========================================================================================================
+                 //1登陆=========================================================================================================
             switch (result[1]){
                 case "Login1":
                     cls=Class.forName("org.Control."+result[1]);
@@ -65,7 +68,8 @@ public class ServletTest {
 //                    state.setState(state1);
                     return state;
 
-                    //注册======================================================================================================
+
+                    //2注册======================================================================================================
                 case "Register1":
                     cls=Class.forName("org.Control."+result[1]);
                     con=cls.getConstructor();
@@ -79,7 +83,8 @@ public class ServletTest {
 
                     return state;
 
-                    //手机号变更=====================================================================================================
+
+                    //3手机号变更=====================================================================================================
                 case "PhoneChange":
                     cls=Class.forName("org.Control."+result[1]);
                     con=cls.getConstructor();
@@ -90,7 +95,7 @@ public class ServletTest {
                     return state;
 
 
-                    //收藏合同
+                    //4收藏合同==========================================================================================
                 case "Addhetong":
                     cls=Class.forName("org.Control."+result[1]);
                     con=cls.getConstructor();
@@ -99,13 +104,19 @@ public class ServletTest {
                     state= (State) doaddhetong.invoke(addhetong1,new Gson().fromJson(gson,HetongDao.class));
 
                     return state;
-                    //查看收藏合同
+
+                    //5查看收藏合同=====================================================================================
 
                 case "GetHetong":
                     cls=Class.forName("org.Control."+result[1]);
                     con=cls.getConstructor();
                     GetHetong gethetong= (GetHetong) con.newInstance();
                     Method dogethetong=cls.getMethod(result[2],GetDao.class);
+                    state= (State) dogethetong.invoke(gethetong,new Gson().fromJson(gson,GetDao.class));
+                    return state;
+
+
+
 //                    Gson json= (Gson) dogethetong.invoke(gethetong,new Gson().fromJson(gson,GetDao.class));
 //
 //                    return json;
@@ -114,7 +125,7 @@ public class ServletTest {
 
 
 
-                    //查找律师
+                    //6查找律师===========================================================================================
 
                 case "GetLawers":
                     cls=Class.forName("org.Control."+result[1]);
@@ -125,7 +136,7 @@ public class ServletTest {
                     return state;
 
 
-                    //获取新闻
+                    //7获取新闻=========================================================================================
                 case  "GetNews":
                     cls=Class.forName("org.Control."+result[1]);
                     con=cls.getConstructor();
@@ -134,10 +145,80 @@ public class ServletTest {
                     state= (State) dogetnews.invoke(getNews,new Gson().fromJson(gson,NewsDao.class));
                     return state;
 
+                    //8查看优惠券==========================================================================================
+                case "Getvoucher":
+                    cls=Class.forName("org.Control."+result[1]);
+                    con=cls.getConstructor();
+                    Getvoucher getvoucher= (Getvoucher) con.newInstance();
+                    Method dpoget=cls.getMethod(result[2], org.Pay.User.class);
+                    state= (State) dpoget.invoke(getvoucher,new Gson().fromJson(gson, org.Pay.User.class));
+                    return state;
+
+                    //9 余额支付========================================================================================
+                case "Pay":
+                     cls=Class.forName("org.Control."+result[1]);
+                     con=cls.getConstructor();
+                     Pay pay= (Pay) con.newInstance();
+                     Method dopay=cls.getMethod(result[2],PayUser.class);
+                     state= (State) dopay.invoke(pay,new Gson().fromJson(gson,PayUser.class));
+                     return state;
+
+
+                     //10 优惠券支付=======================================================================================
+                case "UuiPay":
+                      cls=Class.forName("org.Control."+result[1]);
+                      con=cls.getConstructor();
+                      UuiPay upay= (UuiPay) con.newInstance();
+                      Method doupay=cls.getMethod(result[2],PayUser.class);
+                      state= (State) doupay.invoke(upay,new Gson().fromJson(gson, PayUser.class));
+                      return state;
+
+                      //11 用户基本信息修改============================================
+                case "Userchange":
+                    cls=Class.forName("org.Control."+result[1]);
+                    con=cls.getConstructor();
+                    Userchange userchange= (Userchange) con.newInstance();
+                    Method douserchange=cls.getMethod(result[2], org.DaoTest.Userchange.UserDao.class);
+                    state= (State) douserchange.invoke(userchange,new Gson().fromJson(gson, org.DaoTest.Userchange.UserDao.class));
+
+                            return state;
+
+
+                   //12 修改密码===========================================================================================
+                case "PassChangeSend":
+                    cls=Class.forName("org.Control."+result[1]);
+                    con=cls.getConstructor();
+                    PassChangeSend passChange= (PassChangeSend) con.newInstance();
+                     Method  dopasschange=cls.getMethod(result[2],PassDao.class);
+                     state= (State) dopasschange.invoke(passChange,new Gson().fromJson(gson,PassDao.class));
+                     return state;
+
+                      // 13 查看个人信息===================================================
 
 
 
+                case "GetInformation":
 
+
+
+                        cls=Class.forName("org.Control."+result[1]);
+                        con=cls.getConstructor();
+                        GetInformation getinfomation= (GetInformation) con.newInstance();
+                        Method dogetmation=cls.getMethod(result[2], org.DaoTest.Userchange.UserDao.class);
+                        state= (State) dogetmation.invoke(getinfomation,new Gson().fromJson(gson, org.DaoTest.Userchange.UserDao.class));
+
+                        return state;
+
+                  //获取videos
+                case "Getvideos":
+                      cls=Class.forName("org.Control."+result[1]);
+                      con=cls.getConstructor();
+                      Getvideos getvideos= (Getvideos) con.newInstance();
+                      Method  dogetvideos=cls.getMethod(result[2],VideosDao.class);
+                      state= (State) dogetvideos.invoke(getvideos,new Gson().fromJson(gson,VideosDao.class));
+
+
+                   return state;
             }
 
 

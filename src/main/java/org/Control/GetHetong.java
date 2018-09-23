@@ -35,19 +35,22 @@ public class GetHetong {
         int userid=getDao.getUserid();
         Connection connection=JDBCConnection.getconnection();
         ArrayList arrayList=new ArrayList();
-        HetongDao rhetongDao=new HetongDao();
 
-        String sql="Select * from hetong where id like "+"'"+userid+"%'";
+
+        String sql="Select * from hetong where userid ="+userid;
         LOGGER.info("this is my sql"+sql);
         try {
             Statement statement=connection.createStatement();
             ResultSet rs=statement.executeQuery(sql);
             while (rs.next()){
-                rhetongDao.setId(rs.getString("id"));
-                rhetongDao.setUrl(rs.getString("url"));
+                HetongDao rhetongDao=new HetongDao();
+                rhetongDao.setId(rs.getInt("id"));
+               // rhetongDao.setUrl(rs.getString("url"));
                 rhetongDao.setTitle(rs.getString("title"));
                 rhetongDao.setTime(rs.getString("time"));
-                rhetongDao.setMessage(rs.getString("message"));
+               // rhetongDao.setMessage(rs.getString("message"));
+                rhetongDao.setFengxian(rs.getString("fengxian"));
+                rhetongDao.setJianyi(rs.getString("jianyi"));
 
                 arrayList.add(rhetongDao);
 
@@ -59,6 +62,7 @@ public class GetHetong {
         }
         String json=JSON.toJSONString(arrayList);
         state.setMessage(json);
+        state.setState(1);
         LOGGER.info("这是我们的 "+json);
  return state;
 
@@ -93,51 +97,73 @@ public class GetHetong {
     }
     //=================================================================================================================
     //查看具体的信息  走 redis6381----mysql 返回id+url
-    public State get(GetDao getDao){
+
+
+    public State getOne(GetDao getDao){
         String aa=null;
         String mmess="";
-        String id=getDao.getHetongid();
+        int id=getDao.getId();
         LOGGER.info("合同的id是  "+id);
-        Jedis jedis6381=new Jedis("127.0.0.1",6381);
-        Set ss=jedis6381.keys(id);
-        Iterator iterator=ss.iterator();
-        while (iterator.hasNext()){
-            aa=(String)iterator.next();
-            System.out.println("key=  "+aa);
+//        Jedis jedis6381=new Jedis("127.0.0.1",6381);
+//        Set ss=jedis6381.keys(String.valueOf(id));
+//        Iterator iterator=ss.iterator();
+//        while (iterator.hasNext()){
+//            System.out.println("这是redis查询================");
+//            aa=(String)iterator.next();
+//            System.out.println("key=  "+aa);
+//
+//            String lli=jedis6381.get(aa);
+//            mmess=JSON.toJSONString(lli);
+//
+//
+//
+//
+//            System.out.println("list=  "+mmess);
+//
+//
+//
+//        }
+//        if (aa!=null){//走redis
+//
+//            jedis6381.expire(String.valueOf(id),7*24*60*60);
+//
+//            state.setMessage(mmess);
+//            state.setState(1);
+//            LOGGER.info("this is my message from redis "+mmess);
+//            jedis6381.close();
+//            return state;
+//        }else {
 
-            mmess=jedis6381.get(aa);
-            System.out.println("url=  "+mmess);
-        }
-        if (aa!=null){//走redis
 
-            jedis6381.expire(id,7*24*60*60);
-            String www=JSON.toJSONString(mmess);
-            state.setMessage(www);
-            LOGGER.info("this is my message from redis "+www);
-            jedis6381.close();
-            return state;
-        }else {
-            String mess="";
             Connection connection=JDBCConnection.getconnection();
-            String sql="select message from hetong where id ="+"'"+id+"'";
+            String sql="select * from hetong where id ="+id;
             LOGGER.info("this is my sql  "+sql);
             try {
+                HetongDao hetongDao=new HetongDao();
                 Statement statement=connection.createStatement();
-
+                ArrayList list=new ArrayList();
                 ResultSet resultSet=statement.executeQuery(sql);
                 while (resultSet.next()){
-                    mess=resultSet.getString("url");
+
+
+                    hetongDao.setTitle(resultSet.getString("title"));
+                    hetongDao.setTime(resultSet.getString("time"));
+                    hetongDao.setJianyi(resultSet.getString("jianyi"));
+                    hetongDao.setFengxian(resultSet.getString("fengxian"));
+
+                   list.add(hetongDao);
 
                 }
-                LOGGER.info("this is message from sql "+mess);
-                jedis6381.set(id,mess);
-                jedis6381.expire(id,7*24*3600);
-                jedis6381.close();
+                LOGGER.info("this is message from sql "+list);
+
+//                jedis6381.set(String.valueOf(id),String.valueOf(list));
+//                jedis6381.expire(String.valueOf(id),7*24*3600);
+//                jedis6381.close();
 
 
-                 mmess=JSON.toJSONString(mess);
-
-                  state.setMessage(mmess);
+                String json=JSON.toJSONString(list);
+                state.setMessage(json);
+                state.setState(1);
             } catch (SQLException e) {
                 LOGGER.warn("this is in create statement   "+e);
             }
@@ -163,4 +189,4 @@ public class GetHetong {
 
 
 
-}
+//}

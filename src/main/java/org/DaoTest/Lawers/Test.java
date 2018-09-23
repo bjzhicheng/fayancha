@@ -1,6 +1,7 @@
 package org.DaoTest.Lawers;
 
 import org.Control.GetLawers;
+import org.Util.State;
 import org.apache.log4j.PropertyConfigurator;
 
 /**
@@ -17,8 +18,8 @@ public class Test {
 
         GetLawers getLawers=new GetLawers();
         LawersDao ll=new LawersDao();
-        ll.setId(11);
-        String aa=getLawers.GetOne(ll);
+        ll.setId(1231);
+        State aa=getLawers.GetOne(ll);
         System.out.println(aa);
     }
 }

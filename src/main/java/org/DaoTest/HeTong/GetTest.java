@@ -1,6 +1,8 @@
 package org.DaoTest.HeTong;
 
+import com.alibaba.fastjson.JSON;
 import org.Control.GetHetong;
+import org.Util.State;
 import org.apache.log4j.PropertyConfigurator;
 
 /**
@@ -10,12 +12,20 @@ import org.apache.log4j.PropertyConfigurator;
  */
 public class GetTest {
     public static void main(String[] args) {
-        PropertyConfigurator.configure("/home/syl/Law/src/main/java/org/log4j.properties");
+        PropertyConfigurator.configure("/home/syl/project/Law/src/main/resources/LOG4j/Log4j.properties");
         GetDao gg=new GetDao();
-        gg.setUserid(4);
+        gg.setId(6668077);
 
-        gg.setHetongid("2_htttp://8080//hhh");
+//        gg.setHetongid("2_htttp://8080//hhh");
+//        GetHetong getHetong=new GetHetong();
+//        getHetong.get(gg);
+
         GetHetong getHetong=new GetHetong();
-        getHetong.get(gg);
+       //State state= getHetong.getall(gg);
+
+        State state=getHetong.getOne(gg);
+        System.out.println(state.getMessage());
+
+        System.out.println(JSON.toJSONString(state));
     }
 }

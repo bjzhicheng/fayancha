@@ -1,6 +1,6 @@
 package org.CustomerJilu;
 
-import org.Util.GetTime;
+import org.Control.GetCustomerjilu;
 import org.Util.State;
 import org.apache.log4j.PropertyConfigurator;
 
@@ -13,14 +13,19 @@ public class Test {
     public static void main(String[] args) {
         PropertyConfigurator.configure("/home/syl/project/Law/src/main/java/org/log4j.properties");
         CustomerDao customerDao=new CustomerDao();
-        customerDao.setYuaccount(100);
-        customerDao.setUseaccount(30);
-        customerDao.setType("消费");
-        customerDao.setTime(GetTime.GetnowTime());
-        customerDao.setId("1873456");
+        customerDao.setId(123);
+GetCustomerjilu getCustomerjilu=new GetCustomerjilu();
+State state=getCustomerjilu.GddoneCustomer(customerDao);
+        System.out.println(state.getMessage());
 
-        State state= new State();
-        state=AddCustomer.AddoneCustomer(customerDao);
-        System.out.println("扎入状态  "+state.getState());
+//        customerDao.setYuaccount(1000);
+//        customerDao.setUseaccount(300);
+//        customerDao.setType("消费");
+//        customerDao.setTime(GetTime.GetnowTime());
+//        customerDao.setId(123);
+//
+//        State state= new State();
+//        state=AddCustomer.AddoneCustomer(customerDao);
+//        System.out.println("扎入状态  "+state.getState());
     }
 }

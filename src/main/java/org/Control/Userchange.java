@@ -17,17 +17,16 @@ import java.sql.Statement;
  */
 public class Userchange {
     static Logger LOGGER =Logger.getLogger(Userchange.class);
+
+
     public State Userchange(UserDao userDao){
         Statement statement=null;
         State state=new State();
         int id=userDao.getId();
         Connection connection=null;
         PreparedStatement pstm=null;
-String sql="update user set name="+"'"+userDao.getName()+"'"+","+"weixin="+"'"
-        +userDao.getWeixin()+"'"
-        +","+"nativespace="+"'"+userDao.getNativespace()+"'"+","+"companyname="+"'"
-        +userDao.getCompanyname()+"'"+","
-        +"position="+"'"+userDao.getPosition()+"'"+" where id="+id;
+
+String sql="update user set name="+"'"+userDao.getName()+"'"+","+"nativespace="+"'"+userDao.getNativespace()+"'"+" where id="+id;
 
 
 
@@ -38,6 +37,7 @@ String sql="update user set name="+"'"+userDao.getName()+"'"+","+"weixin="+"'"
              int ii=statement.executeUpdate(sql);
              state.setState(ii);
             System.out.println("修改的state= "+ii);
+            LOGGER.info("修改的id是：  "+id);
              state.setId(id);
         } catch (SQLException e) {
             LOGGER.warn("this is in create statement "+e);

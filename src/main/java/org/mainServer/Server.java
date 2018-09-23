@@ -47,7 +47,13 @@ public class Server {
                             ch.pipeline().addLast(new HttpRequestDecoder());//有两次FIle操作
                             ch.pipeline().addLast(new HttpObjectAggregator(65535));//把上一句的两次File操作聚合在一起
                             ch.pipeline().addLast(new ChunkedWriteHandler());//Chunked是一种报文，处理后返回去，报文回去查一下
+                           //  ch.pipeline().addLast(new Handle1());
+
+                            ch.pipeline().addLast(new CheckHandler());
+
                             ch.pipeline().addLast(new OutHandler());
+
+
                             ch.pipeline().addLast(new InHandler());//如果上两句不写
                             // 就会有两次File处理（一次头处理，一次体处理）
                         }

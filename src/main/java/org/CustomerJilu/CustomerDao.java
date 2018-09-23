@@ -6,15 +6,24 @@ package org.CustomerJilu;
  * @Version 1.0
  */
 public class CustomerDao {
-    private String id;
+    public String getCusnumber() {
+        return cusnumber;
+    }
+
+    public void setCusnumber(String cusnumber) {
+        this.cusnumber = cusnumber;
+    }
+
+    private int id;
+    private String cusnumber;
     private double  yuaccount;
     private double useaccount;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

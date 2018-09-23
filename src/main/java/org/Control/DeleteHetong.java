@@ -19,9 +19,9 @@ import java.util.Set;
 public class DeleteHetong {
     static Logger LOGGER=Logger.getLogger(DeleteHetong.class);
     public int delete(DeleteDao delete){
-        String hetongid=delete.getHetongid();
+        int hetongid=delete.getHetongid();
         Jedis  jedis6381=new Jedis("127.0.0.1",6381);
-        Set kye=jedis6381.keys(hetongid);
+        Set kye=jedis6381.keys(String.valueOf(hetongid));
         jedis6381.del(String.valueOf(kye));
 
 //mysql   delete

@@ -10,11 +10,11 @@ import org.apache.log4j.PropertyConfigurator;
  */
 public class Test {
     public static void main(String[] args) {
-        PropertyConfigurator.configure("/home/syl/Law/src/main/java/org/log4j.properties");
-        PhoneDao user=new PhoneDao();
-        user.setId(1566297945 );
-        PhoneChange getnumber=new PhoneChange();
-        String aa=getnumber.getphone(user);
-        System.out.println(aa);
+//        PropertyConfigurator.configure("/home/syl/Law/src/main/java/org/log4j.properties");
+//        PhoneDao user=new PhoneDao();
+//        user.setId(1566297945 );
+//        PhoneChange getnumber=new PhoneChange();
+//        String aa=getnumber.SaveChange(user);
+//        System.out.println(aa);
     }
 }

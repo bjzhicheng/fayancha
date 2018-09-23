@@ -51,7 +51,8 @@ public class Pay {
 
 
         final CustomerDao customerDao=new CustomerDao();
-        customerDao.setId(String.valueOf(qianid));
+        customerDao.setId(qianid);
+        //customerDao.setCusnumber(String.valueOf(qianid));
         GetTime getTime=new GetTime();
         customerDao.setTime(getTime.GetnowTime());
         customerDao.setType("消费");

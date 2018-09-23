@@ -6,17 +6,42 @@ package org.DaoTest.AddHetong;
  * @Version 1.0
  */
 public class HetongDao {
-    private String id;
-    private String url;
-    private String message;
+    public String getFengxian() {
+        return fengxian;
+    }
 
-    public String getId() {
+    public void setFengxian(String fengxian) {
+        this.fengxian = fengxian;
+    }
+
+    public String getJianyi() {
+        return jianyi;
+    }
+
+    public void setJianyi(String jianyi) {
+        this.jianyi = jianyi;
+    }
+
+    private int id;
+    private String url;
+    private  String fengxian;
+    private String jianyi;
+    private int userid;
+
+
+
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
+
+    private String message;
+
+
 
     public String getUrl() {
         return url;
@@ -26,12 +51,12 @@ public class HetongDao {
         this.url = url;
     }
 
-    public int getLoves() {
-        return loves;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setLoves(int loves) {
-        this.loves = loves;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public String getTime() {
@@ -58,7 +83,7 @@ public class HetongDao {
         this.title = title;
     }
 
-    private int loves;
+
     private String time;
 
 

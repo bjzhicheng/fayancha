@@ -6,13 +6,13 @@ package org.DaoTest.DeleteHetong;
  * @Version 1.0
  */
 public class DeleteDao {
-   private String Hetongid;
+   private int Hetongid;
 
-    public String getHetongid() {
+    public int getHetongid() {
         return Hetongid;
     }
 
-    public void setHetongid(String hetongid) {
+    public void setHetongid(int hetongid) {
         Hetongid = hetongid;
     }
 }

@@ -30,7 +30,7 @@ public class Getvideos {
         return coon;
     }
 
-    public  String GetAllVideos(){
+    public  String GetAllVideos(VideosDao video){
 
             ArrayList<VideosDao> arrayList=new ArrayList<>();
 

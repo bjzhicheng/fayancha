@@ -35,7 +35,7 @@ public class GetLawers {
     State state=new State();
 
 
-    public State GetAll(){
+    public State GetAll(LawersDao user){
 
        ArrayList<LawersDao> arrayList=new ArrayList<>();
         String json=null;
@@ -43,26 +43,31 @@ public class GetLawers {
         Connection connection=null;
       connection=getcoon();
 
-        String sql="select id,name,nativespace,belongs,shanchang,phonenumber from lawers ";
+        String sql="select id,name,nativespace,belongs,shanchang,phonenumber,age,sees,loves from lawers ";
         LOGGER.info("this is my sql "+sql);
         try {
-            LawersDao lawer=new LawersDao();
+
             Statement statement=connection.createStatement();
             ResultSet resultSet=statement.executeQuery(sql);
 
             while (resultSet.next()){
+                LawersDao lawer=new LawersDao();
                 lawer.setId(resultSet.getInt("id"));
+
                 lawer.setName(resultSet.getString("name"));
                 lawer.setNativespace(resultSet.getString("nativespace"));
                 lawer.setBelongs(resultSet.getString("belongs"));
                 lawer.setShanchang(resultSet.getString("shanchang"));
                 lawer.setPhonenumber(resultSet.getString("phonenumber"));
+                lawer.setAge(resultSet.getInt("age"));
+                lawer.setSees(resultSet.getInt("sees"));
+                lawer.setLoves(resultSet.getInt("loves"));
                arrayList.add(lawer);
             }
              json=JSON.toJSONString(arrayList);
             state.setMessage(json);
 
-connection.close();
+                connection.close();
 
         } catch (SQLException e) {
             LOGGER.error("this is an error when create statement "+e);
@@ -81,7 +86,7 @@ connection.close();
         Connection connection=null;
         connection=getcoon();
 
-         String sql="select id,name,nativespace,belongs,shanchang,phonenumber from lawers " +
+         String sql="select id,name,nativespace,belongs,shanchang,phonenumber,age,sees,loves from lawers " +
                 "where nativespace like  "+"'"+xianzhi.getNativespace()+"%' and "+"shanchang " +
                 "like"+"'"+xianzhi.getShanchang()+"%'";
           LOGGER.info("this is my sql "+sql);
@@ -95,9 +100,13 @@ connection.close();
                 lawer.setId(resultSet.getInt("id"));
                 lawer.setPhonenumber(resultSet.getString("phonenumber"));
                 lawer.setName(resultSet.getString("name"));
+               // lawer.setAge(resultSet.getInt("age"));
+                 lawer.setAge(resultSet.getInt("age"));
                 lawer.setNativespace(resultSet.getString("nativespace"));
                 lawer.setBelongs(resultSet.getString("belongs"));
                 lawer.setShanchang(resultSet.getString("shanchang"));
+                lawer.setSees(resultSet.getInt("sees"));
+                lawer.setLoves(resultSet.getInt("loves"));
 
                 arrayList.add(lawer);
             }
@@ -119,11 +128,11 @@ connection.close();
 
 
 
-    public String GetOne(LawersDao lawer){
+    public State GetOne(LawersDao lawer){
         String json=null;
 
-        LawersDao rturn=new LawersDao();
 
+        ArrayList <LawersDao> arrayList=new ArrayList<>();
         Connection coon=getcoon();
         String sql="select * from lawers where id ="+lawer.getId();
         LOGGER.info("this is my sql in getone : "+sql);
@@ -131,6 +140,7 @@ connection.close();
             Statement statement=coon.createStatement();
             ResultSet ss=statement.executeQuery(sql);
             while (ss.next()){
+                LawersDao rturn=new LawersDao();
                 rturn.setShanchang(ss.getString("shanchang"));
                 rturn.setPhonenumber(ss.getString("phonenumber"));
                 rturn.setBelongs(ss.getString("belongs"));
@@ -141,8 +151,11 @@ connection.close();
                 rturn.setJianjie(ss.getString("jianjie"));
                 rturn.setAnli(ss.getString("anli"));
                 rturn.setZhiwu(ss.getString("zhuwu"));
+                arrayList.add(rturn);
             }
-            json=JSON.toJSONString(rturn);
+            json=JSON.toJSONString(arrayList);
+            state.setState(1);
+            state.setMessage(json);
 
         } catch (SQLException e) {
             LOGGER.error("this is an error when create statement  "+e);
@@ -153,7 +166,7 @@ connection.close();
             LOGGER.error("this is an error when close coon "+e );
         }
 
-        return json;
+        return state;
 
     }
 

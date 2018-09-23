@@ -10,7 +10,35 @@ public class State {
     private int state;
     private double account;
     private String message;
+    private  String one;
 
+
+    public String getOne() {
+        return one;
+    }
+
+    public void setOne(String one) {
+        this.one = one;
+    }
+
+    public String getAnother() {
+        return another;
+    }
+
+    public void setAnother(String another) {
+        this.another = another;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    private String another;
+    private String type;
     public String getMessage() {
         return message;
     }

@@ -19,7 +19,17 @@ public class LawersDao {
     }
 
     private String belongs;
-    private String age;
+
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    private  int age;
     private String sex;
     private String phonenumber;
     private String weixin;
@@ -59,13 +69,8 @@ public class LawersDao {
         this.belongs = belongs;
     }
 
-    public String getAge() {
-        return age;
-    }
 
-    public void setAge(String age) {
-        this.age = age;
-    }
+
 
     public String getSex() {
         return sex;

@@ -6,6 +6,16 @@ package org.DaoTest.Userchange;
  * @Version 1.0
  */
 public class UserDao {
+    public  String phonenumber;
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
     public String getName() {
         return name;
     }

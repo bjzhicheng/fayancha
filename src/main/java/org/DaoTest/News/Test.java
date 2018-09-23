@@ -14,7 +14,11 @@ public class Test {
     public static void main(String[] args) {
         PropertyConfigurator.configure("/home/syl/project/Law/src/main/java/org/log4j.properties");
         GetNews getNews=new GetNews();
-        State state=getNews.GetAll();
+        NewsDao u=new NewsDao();
+        u.setId(1);
+      //  State state=getNews.GetAll(u);
+
+        State state=getNews.GetOneNews(u);
 //        System.out.println(aa);
 
 //        String rrr=null;

@@ -16,7 +16,7 @@ public class JDBCConnection {
 
     public static Connection getconnection() {
         String DRIVER_CLASS = "com.mysql.jdbc.Driver";
-        String URL="jdbc:mysql://127.0.0.1:3306/law";
+        String URL="jdbc:mysql://localhost:3306/law?useUnicode=true&characterEncoding=utf-8";
         String PASS="123456";
         String USERNAME="root";
         Connection coon=null;

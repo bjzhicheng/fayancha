@@ -53,7 +53,7 @@ public class PassChangeSend {
 
         return state;
         }
-
+  //修改
         public State PassChange(PassDao user){
         State state2=new State();
         String newphonenumber=user.getPhonenumber();

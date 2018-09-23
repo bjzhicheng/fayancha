@@ -7,7 +7,7 @@ package org.DaoTest.HeTong;
  */
 public class GetDao {
     private int userid;
-
+    private  int id;
 
     public int getUserid() {
         return userid;
@@ -27,4 +27,11 @@ public class GetDao {
 
     private String hetongid;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

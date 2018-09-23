@@ -30,13 +30,18 @@ public class InHandler extends ChannelInboundHandlerAdapter {
         try {
 //            System.out.println(msg.toString());
             FullHttpRequest fhr = (FullHttpRequest) msg;
-            System.out.println(fhr.headers().get("Cookies"));
-            message.setCookies((String) fhr.headers().get("Cookies"));
+//            System.out.println(fhr.headers().get("Cookies"));
+//            message.setCookies((String) fhr.headers().get("Cookies"));
 //            System.out.println(cookie.toString());
 //            ByteBuf result = (ByteBuf) msg;
 //            byte[] result1 = new byte[result.readableBytes()];
 //            result.readBytes(result1);
             System.out.println("请求的URL："+fhr.uri());
+
+
+            //if(){}
+
+
             message.setUrl(fhr.uri());
             message.setFhr(fhr);
             ByteBuf buf = fhr.content();
@@ -47,6 +52,24 @@ public class InHandler extends ChannelInboundHandlerAdapter {
             String data=new String(result1,"utf8");
             System.out.println("读取的数据："+data);
             message.setData(data);
+
+            if(fhr.uri().equals("///")){
+
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+
+
 //            ServletTest.doServlet(fhr.uri(),new
 //                    Gson().fromJson(data,Goods.class));
 

@@ -2,6 +2,7 @@ package org.Control;
 
 import org.DaoTest.AddHetong.HetongDao;
 import org.Util.JDBCConnection;
+import org.Util.MakeUuid;
 import org.Util.State;
 import org.apache.log4j.Logger;
 import redis.clients.jedis.Jedis;
@@ -23,38 +24,61 @@ import java.util.Date;
  * 用户id转化 id——
  */
 public class Addhetong {
+    //daodaolvfa
+    //lvfadaodao6666
+    //ssh root@60.205.0.237
+    //22
+    //805394
+
+    //
     static Logger LOGGER=Logger.getLogger(Addhetong.class);
 
     public State addhetong(HetongDao hetong){
-        String id=hetong.getId()+"_"+hetong.getUrl();
+        int userid=hetong.getId();
+        int id=MakeUuid.Make();
+
+
+
         State state=new State();
-        int loves=0;
-        String url=hetong.getUrl();
+      //  int loves=0;
+        //String url=hetong.getUrl();
         String title=hetong.getTitle();
         SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy.MM.dd");
         String time= simpleDateFormat.format(new Date());
-        String mess=hetong.getMessage();
+        String message=hetong.getMessage();
+        String fenhxian=hetong.getFengxian();
+        String jianyi=hetong.getJianyi();
+
+
+
         Connection connection=JDBCConnection.getconnection();
-        Jedis jedis=new Jedis("127.0.0.1",6381);
-        jedis.set(id,url);
-        jedis.expire(id,7*24*60*60);
-
-        jedis.close();
-
-
+//        Jedis jedis=new Jedis("127.0.0.1",6381);
+//        jedis.set(String.valueOf(id),url);
+//        jedis.expire(String.valueOf(id),7*24*60*60);
+//
+//        jedis.close();
 
 
-        String sql="insert into hetong (id,url,loves,title,time,message)"+"values"+"(?,?,?,?,?,?)";
+
+
+        String sql="insert into hetong (id,title,time,message,jianyi,fengxian,userid)"+"values"+"(?,?,?,?,?,?,?)";
+        System.out.println(sql);
         PreparedStatement pstm=null;
         int i=0;
         try {
             pstm=(PreparedStatement)connection.prepareStatement(sql);
-            pstm.setString(1,id);
-            pstm.setString(2,url);
-            pstm.setInt(3,loves);
-            pstm.setString(4,title);
-            pstm.setString(5,time);
-            pstm.setString(6,mess);
+            pstm.setInt(1,id);
+            //pstm.setString(2,url);
+           // pstm.setInt(3,loves);
+            pstm.setString(2,title);
+            System.out.println(jianyi);
+            System.out.println(fenhxian);
+           // pstm.setString(4,title);
+            pstm.setString(3,time);
+            pstm.setString(4,message);
+            pstm.setString(5,jianyi);
+            pstm.setString(6,fenhxian);
+            pstm.setInt(7,userid);
             i=pstm.executeUpdate();
             state.setState(i);
         } catch (SQLException e) {

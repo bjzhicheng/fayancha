@@ -20,8 +20,8 @@ public class AddCustomer {
     private static Logger LOGGER=Logger.getLogger(AddCustomer.class);
        public static State AddoneCustomer(CustomerDao customerDao){
            State state=new State();
-           String iid=customerDao.getId();
-           String id=iid+GetTime.GetnowTime();
+           int  userid=customerDao.getId();
+           String id=userid+GetTime.GetnowTime();
            double yuaccount=customerDao.getYuaccount();
            double useaccount=customerDao.getUseaccount();
            String time=customerDao.getTime();
@@ -29,17 +29,18 @@ public class AddCustomer {
 //           String sql="insert into customerjilu ( id,yuaccount,useaccount,time,type) values"+"("+"'"+newid+"',"+
 //                   newyuanaccount+","+newuseaccount+",'"+newtime+"','"+newtype+")";
         //   String sql="insert into customerjilu(id,yuaccount,useaccount,time,type) values"+"(?,?,?,?,?)";
-           String sql="insert into customerjilu (id,yuaccount,useaccount,time,type)"+"values"+"(?,?,?,?,?)";
+           String sql="insert into customerjilu (userid,id,yuaccount,useaccount,time,type)"+"values"+"(?,?,?,?,?,?)";
            LOGGER.info("this is my insert sql  "+sql);
            PreparedStatement pstm=null;
            Connection connection= (Connection) JdbcPool.get();
            try {
                pstm=(PreparedStatement)connection.prepareStatement(sql);
-                pstm.setString(1,id);
-                pstm.setDouble(2,yuaccount);
-                pstm.setDouble(3,useaccount);
-                pstm.setString(4,time);
-                pstm.setString(5,type);
+               pstm.setInt(1,userid);
+               pstm.setString(2,id);
+                pstm.setDouble(3,yuaccount);
+                pstm.setDouble(4,useaccount);
+                pstm.setString(5,time);
+                pstm.setString(6,type);
                 int i=pstm.executeUpdate();
                 state.setState(1);
 

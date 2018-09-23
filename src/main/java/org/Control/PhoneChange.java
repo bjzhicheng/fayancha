@@ -43,84 +43,84 @@ public class PhoneChange{
 
   //  1----getphone(PhoneDao getphone)传入id 返回phonenumber========================================================================
 
-    public String getphone(PhoneDao getphone){
-        String phonenumber=null;
-        int id=getphone.getId();
-        LOGGER.info("this is user id：  "+id);
-        String sql="select phonenumber from user where id="+id;
-        Connection connection=JDBCConnection.getconnection();
-        try {
-            Statement statement=connection.createStatement();
-            ResultSet re=statement.executeQuery(sql);
-            while(re.next()){
-                phonenumber=re.getString("phonenumber");
-            }
-        } catch (SQLException e) {
-            LOGGER.warn("this is in create statemengt "+e);
-        }
-
-        LOGGER.info("这是获取的手机号码： "+phonenumber);
-        String json=JSON.toJSONString(phonenumber);
-        return  json;
-
-    }
-
-
-    //=====================================================================================================
-
-
-     // 2------Phonechange(PhoneDao changer)//发送信息，获取电话，发送验证码=================================================================
-
-    public State Phonechange(PhoneDao changer){
-        Send send=new Send();
-        State state=new State();
-        int mess=0;
-        try {
-            mess=send.sendSms(changer.getPhonenumber());
-            Jedis jedis6382=new Jedis(HOST,6382);
-            jedis6382.set(changer.getPhonenumber(), String.valueOf(mess));
-            jedis6382.close();
-            if(mess!=0){
-                state.setState(1);
-            }else{
-                state.setState(0);
-            }
-        } catch (ClientException e) {
-            e.printStackTrace();
-        }
-
-return  state;
-    }
+//   public  String getphone(PhoneDao getphone){
+//        String phonenumber=null;
+//        int id=getphone.getId();
+//        LOGGER.info("this is user id：  "+id);
+//        String sql="select phonenumber from user where id="+id;
+//        Connection connection=JDBCConnection.getconnection();
+//        try {
+//            Statement statement=connection.createStatement();
+//            ResultSet re=statement.executeQuery(sql);
+//            while(re.next()){
+//                phonenumber=re.getString("phonenumber");
+//            }
+//        } catch (SQLException e) {
+//            LOGGER.warn("this is in create statemengt "+e);
+//        }
+//
+//        LOGGER.info("这是获取的手机号码： "+phonenumber);
+//        String json=JSON.toJSONString(phonenumber);
+//        return  json;
+//
+//    }
+//
+//
+//    //=====================================================================================================
+//
+//
+//     // 2------Phonechange(PhoneDao changer)//发送信息，获取电话，发送验证码=================================================================
+//
+//    public State Phonechange(PhoneDao changer){
+//        Send send=new Send();
+//        State state=new State();
+//        int mess=0;
+//        try {
+//            mess=send.sendSms(changer.getPhonenumber());
+//            Jedis jedis6382=new Jedis(HOST,6382);
+//            jedis6382.set(changer.getPhonenumber(), String.valueOf(mess));
+//            jedis6382.close();
+//            if(mess!=0){
+//                state.setState(1);
+//            }else{
+//                state.setState(0);
+//            }
+//        } catch (ClientException e) {
+//            e.printStackTrace();
+//        }
+//
+//return  state;
+//    }
 
     //3  获取验证码  判断get 验证码 余 redis 李存储的是否.equals  return state=1
 
-    public State PhoneChackchange(PhoneDao checker){
-             State state=new State();
-             String realmessage=null;
-
-
-              // int gemessage=checker.getSendmessage();
-        Jedis redis6382=new Jedis(HOST,6782);
-        Set ss=redis6382.keys(checker.getPhonenumber());
-          Iterator iterator=ss.iterator();
-          while(iterator.hasNext()){
-               String ii= (String) iterator.next();
-               realmessage=redis6382.get(ii);
-          }
-          redis6382.close();
-          if (realmessage.equals(checker.getYanzhengma())){
-
-
-              state.setState(1);
-               return state;
-          }
-          else {
-              state.setState(0);
-
-              return  state;
-          }
-
-    }
+//    public State PhoneChackchange(PhoneDao checker){
+//             State state=new State();
+//             String realmessage=null;
+//
+//
+//              // int gemessage=checker.getSendmessage();
+//        Jedis redis6382=new Jedis(HOST,6782);
+//        Set ss=redis6382.keys(checker.getPhonenumber());
+//          Iterator iterator=ss.iterator();
+//          while(iterator.hasNext()){
+//               String ii= (String) iterator.next();
+//               realmessage=redis6382.get(ii);
+//          }
+//          redis6382.close();
+//          if (realmessage.equals(checker.getYanzhengma())){
+//
+//
+//              state.setState(1);
+//               return state;
+//          }
+//          else {
+//              state.setState(0);
+//
+//              return  state;
+//          }
+//
+//    }
     // 4  输入新的手机号 发送验证码
     public State Change(PhoneDao phoneDao){
         State state=new State();
